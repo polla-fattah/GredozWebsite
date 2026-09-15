@@ -1,0 +1,146 @@
+{
+  "Navbar": {
+    "projects": "Projects",
+    "about": "About Us",
+    "services": "Services",
+    "blog": "Blog",
+    "getStarted": "LET'S TALK"
+  },
+  "Footer": {
+    "useCases": "Use Cases",
+    "services": "Services",
+    "resources": "Resources",
+    "partners": "Partners",
+    "about": "About",
+    "copyright": "© 2026 NexStudio. All rights reserved."
+  },
+  "Hero": {
+    "headline": "We Build Digital Products That Drive Growth.",
+    "subheadline": "From startups to global brands — we design, develop, and deliver high-performing web and mobile solutions that turn ideas into impact.",
+    "explore": "EXPLORE PROJECTS",
+    "contact": "LET'S TALK"
+  },
+  "Partners": {
+    "trusted": "Trusted by innovative companies worldwide"
+  },
+  "About": {
+    "title": "A team of Builders and <italic>Innovators</italic>",
+    "description": "We combine creativity with engineering discipline to build products that users love. From early-stage startups to established enterprises, we help our clients transform complex problems into simple, elegant solutions.",
+    "stats": {
+      "projects": "Projects Delivered",
+      "revenue": "Revenue Generated"
+    }
+  },
+  "Features": {
+    "title": "Why Partner With <italic>Us</italic>",
+    "f1_title": "Custom Solutions",
+    "f1_desc": "Tailor-made software designed to meet your unique business challenges and goals.",
+    "f2_title": "Dedicated Support",
+    "f2_desc": "Reliable assistance and maintenance to ensure your systems run smoothly.",
+    "f3_title": "Innovative Tech",
+    "f3_desc": "Cutting-edge technologies to drive efficiency and competitive advantage.",
+    "f4_title": "Expert Team",
+    "f4_desc": "Seasoned professionals committed to delivering excellence in every project."
+  },
+  "Services": {
+    "title": "Our <italic>Services</italic>",
+    "s1_title": "Web App Development",
+    "s1_desc": "Build blazing-fast web applications with clean architecture and scalable infrastructure.",
+    "s2_title": "Mobile App Development",
+    "s2_desc": "Create engaging mobile experiences natively for both iOS and Android platforms.",
+    "s3_title": "API & Backend Solutions",
+    "s3_desc": "Design robust and secure backend systems that power your digital products.",
+    "s4_title": "Maintenance & Growth",
+    "s4_desc": "Continuous support and optimization to keep your applications running smoothly."
+  },
+  "Projects": {
+    "title": "NexStudio <italic>Projects</italic>",
+    "p1_title": "Financial Management System",
+    "p1_badge": "WEB APP",
+    "p1_date": "OCT 2026",
+    "p2_title": "E-Commerce Dashboard",
+    "p2_badge": "WEB APP",
+    "p2_date": "FEB 2026",
+    "explore": "EXPLORE ALL PROJECTS",
+    "p1_excerpt": "A comprehensive financial dashboard featuring real-time data visualization and automated reporting.",
+    "p2_excerpt": "A centralized analytics hub integrating multiple e-commerce storefronts into one management dashboard."
+  },
+  "Testimonials": {
+    "title": "Our Client <italic>Reviews</italic>",
+    "review": "DigitX transformed our outdated website into a modern, responsive platform. Their attention to detail and ability to understand our vision made the entire process smooth and hassle-free.",
+    "author": "Michael Johnson",
+    "role": "Marketing Manager at GlobalTech Solutions."
+  },
+  "Blog": {
+    "title": "NexStudio <italic>Blogs</italic>",
+    "b1_badge": "APP DESIGN",
+    "b1_date": "JUN 2026",
+    "b1_title": "The Future of Web UX: Trends That Will Shape 2027",
+    "b2_badge": "APP DESIGN",
+    "b2_date": "JUL 2026",
+    "b2_title": "The Future of Web UX: Trends That Will Shape 2027"
+  },
+  "Cta": {
+    "title": "Ready to build<br></br>your next <italic>big idea</italic>?",
+    "button": "CONTACT US"
+  },
+  "ProjectDetails": {
+    "not_found": "Project not found.",
+    "financial-management": {
+      "title": "Financial Management System",
+      "badge": "WEB APP",
+      "date": "OCT 2026",
+      "client": "FinTech Corp",
+      "industry": "Finance",
+      "duration": "6 Months",
+      "challenge": "The client relied on a legacy, on-premise system that was slow, prone to errors, and lacked real-time reporting capabilities. They needed a secure, modern, and cloud-native solution to streamline their financial operations and scale with their growing user base.",
+      "solution": "We designed and developed a comprehensive financial dashboard featuring real-time data visualization, automated reporting, and secure role-based access controls. The architecture leveraged Next.js for the frontend and a scalable microservices backend.",
+      "results": "The new system reduced data processing time by 40%, eliminated manual reporting errors, and provided executives with immediate insights into financial health.",
+      "services": [
+        "UX/UI Design",
+        "Frontend Development",
+        "Backend Engineering"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL"
+      ]
+    },
+    "ecommerce-dashboard": {
+      "title": "E-Commerce Dashboard",
+      "badge": "WEB APP",
+      "date": "FEB 2026",
+      "client": "Global Retailers",
+      "industry": "Retail & E-Commerce",
+      "duration": "4 Months",
+      "challenge": "Managing inventory, tracking orders, and analyzing sales across multiple storefronts was a manual, disjointed process. The client required a centralized hub to monitor their entire e-commerce ecosystem in real time.",
+      "solution": "We built a customized analytics and management dashboard that integrated seamlessly with their existing Shopify and WooCommerce stores. It featured advanced filtering, sales forecasting algorithms, and intuitive charts.",
+      "results": "The centralized dashboard improved inventory turnover by 25% and saved the operations team over 15 hours a week in manual tracking.",
+      "services": [
+        "Product Strategy",
+        "Web Development",
+        "Data Integration"
+      ],
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "GraphQL",
+        "AWS"
+      ]
+    },
+    "labels": {
+      "client": "Client",
+      "industry": "Industry",
+      "timeline": "Timeline",
+      "challenge": "The Challenge",
+      "solution": "The Solution",
+      "results": "The Results",
+      "back": "Back to Home",
+      "services": "Services",
+      "technologies": "Technologies",
+      "launchProject": "Launch Project"
+    }
+  }
+}

@@ -2,15 +2,22 @@
 
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
+import { Link } from "@/i18n/routing"
+import { ArrowRight } from "lucide-react"
+import { TechGrid, NodeTopologyGraph } from "@/components/ui/background-patterns"
 
 export function AboutStats() {
   const t = useTranslations("About")
+  const tAbout = useTranslations("AboutPage")
 
   return (
-    <section id="about" className="py-24 md:py-40 bg-foreground text-background">
-      <div className="container max-w-7xl mx-auto px-4">
+    <section id="about" className="relative py-24 md:py-40 bg-foreground text-background overflow-hidden">
+      {/* Blueprint Grid & Topological System Graph */}
+      <TechGrid variant="dark" mask="faded" />
+      <NodeTopologyGraph color="background" />
+
+      <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -27,22 +34,20 @@ export function AboutStats() {
             </h2>
           </motion.div>
 
-          {/* Description and Stats on the right */}
-          <motion.div variants={fadeInUp} className="flex flex-col gap-12 justify-start pt-2">
-            <p className="text-base md:text-lg text-background/70 leading-relaxed font-light">
+          {/* Description and Action on the right */}
+          <motion.div variants={fadeInUp} className="flex flex-col gap-8 justify-start pt-2">
+            <p className="text-base md:text-lg text-background/80 leading-relaxed font-light">
               {t("description")}
             </p>
 
-            <div className="grid grid-cols-2 gap-8 border-t border-background/10 pt-10 mt-4">
-              <div className="flex flex-col gap-2">
-                <span className="text-4xl md:text-5xl font-medium tracking-tight">5K+</span>
-                <span className="text-sm font-semibold text-background/50 tracking-wide uppercase">{t("stats.projects")}</span>
-              </div>
-              
-              <div className="flex flex-col gap-2">
-                <span className="text-4xl md:text-5xl font-medium tracking-tight">$1M+</span>
-                <span className="text-sm font-semibold text-background/50 tracking-wide uppercase">{t("stats.revenue")}</span>
-              </div>
+            <div className="pt-2">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase text-background hover:text-background/80 transition-colors group"
+              >
+                <span>{tAbout("learnMore")}</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180 transition-transform" />
+              </Link>
             </div>
           </motion.div>
         </motion.div>

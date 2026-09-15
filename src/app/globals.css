@@ -120,8 +120,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+  ::selection {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+  ::-moz-selection {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground selection:bg-foreground selection:text-background;
   }
   html {
     @apply font-sans;
@@ -130,11 +138,53 @@
 
 @layer utilities {
   .animate-marquee {
-    animation: marquee 25s linear infinite;
+    animation: marquee 30s linear infinite;
+  }
+  .animate-marquee-rtl {
+    animation: marquee-rtl 30s linear infinite;
+  }
+  .bg-tech-grid {
+    background-size: 48px 48px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  }
+  .dark .bg-tech-grid,
+  .bg-tech-grid-dark {
+    background-size: 48px 48px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+  .bg-dot-matrix {
+    background-size: 24px 24px;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  }
+  .dark .bg-dot-matrix,
+  .bg-dot-matrix-dark {
+    background-size: 24px 24px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  }
+  .mask-radial-faded {
+    -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 75%);
+    mask-image: radial-gradient(circle at center, black 35%, transparent 75%);
+  }
+  .mask-radial-hero {
+    -webkit-mask-image: radial-gradient(ellipse 80% 65% at 50% 25%, black 30%, transparent 80%);
+    mask-image: radial-gradient(ellipse 80% 65% at 50% 25%, black 30%, transparent 80%);
+  }
+  .mask-radial-top {
+    -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black 40%, transparent 80%);
   }
 }
 
 @keyframes marquee {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
 }

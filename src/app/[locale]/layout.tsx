@@ -91,7 +91,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body
-        className={`${arkanGraphik.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${arkanGraphik.variable} font-sans antialiased min-h-screen flex flex-col selection:bg-foreground selection:text-background`}
       >
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll>

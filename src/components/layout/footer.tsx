@@ -19,39 +19,40 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-24">
             <div className="flex flex-col gap-4">
               <h4 className="font-medium text-white text-sm mb-2">{t("useCases")}</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Product Development</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Enterprise Systems</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">SaaS Dashboards</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Web Applications</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">AI Research Solutions</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.productDevelopment")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.enterpriseSystems")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.saasDashboards")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.webApplications")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.aiResearchSolutions")}</Link>
             </div>
 
             <div className="flex flex-col gap-4">
               <h4 className="font-medium text-white text-sm mb-2">{t("services")}</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Software Development</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Web Development</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">App Development</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">UI/UX Design</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Product Strategy</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Maintenance</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.softwareDevelopment")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.webDevelopment")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.appDevelopment")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.uiuxDesign")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.productStrategy")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.maintenance")}</Link>
             </div>
 
             <div className="flex flex-col gap-4">
               <h4 className="font-medium text-white text-sm mb-2">{t("resources")}</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Engineering</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Resources</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">News</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Documentation</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Guides</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.engineering")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.resources")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.news")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.documentation")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.guides")}</Link>
             </div>
 
             <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-white text-sm mb-2">Company</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">About</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Leadership</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Terms</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Careers</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">Investors</Link>
+              <h4 className="font-medium text-white text-sm mb-2">{t("company")}</h4>
+              <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">{t("about")}</Link>
+              <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">{t("contact")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.leadership")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.terms")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.careers")}</Link>
+              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.investors")}</Link>
             </div>
           </div>
 
@@ -63,11 +64,7 @@ export function Footer() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-white/50 w-full px-4">
             <div className="flex gap-4">
-              <Link href="#" className="hover:text-white transition-colors">Terms & conditions</Link>
-              <span>·</span>
-              <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-              <span>·</span>
-              <Link href="#" className="hover:text-white transition-colors">Cookies</Link>
+              <Link href="#" className="hover:text-white transition-colors">{t("links.termsAndConditions")}</Link>
             </div>
             <p>{t("copyright")}</p>
           </div>

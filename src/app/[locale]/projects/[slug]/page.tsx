@@ -113,9 +113,13 @@ export default function ProjectDetails() {
                     <span className="text-xs text-muted-foreground font-semibold uppercase tracking-widest">{t("labels.services")}</span>
                     <div className="flex flex-wrap gap-2">
                       {services.map((service: string, i: number) => (
-                        <span key={i} className="px-4 py-2 rounded-full bg-muted text-sm font-medium">
+                        <Link
+                          key={i}
+                          href="/services"
+                          className="px-4 py-2 rounded-full bg-muted text-sm font-medium hover:bg-foreground hover:text-background dark:hover:bg-foreground dark:hover:text-background transition-colors"
+                        >
                           {service}
-                        </span>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -156,7 +160,7 @@ export default function ProjectDetails() {
               </motion.div>
               
               {/* Secondary Image */}
-              <motion.div variants={fadeInUp} className="w-full aspect-[4/3] md:aspect-[16/9] rounded-[2.5rem] overflow-hidden relative">
+              <motion.div variants={fadeInUp} className="w-full aspect-[4/3] md:aspect-[16/9] rounded-3xl overflow-hidden relative">
                 <Image 
                   src={secondaryImageSrc} 
                   alt="Project Detail"
@@ -174,11 +178,36 @@ export default function ProjectDetails() {
               </motion.div>
 
               {/* The Results */}
-              <motion.div variants={fadeInUp} className="bg-foreground text-background p-10 md:p-16 rounded-[2.5rem] mt-8">
+              <motion.div variants={fadeInUp} className="bg-foreground text-background p-10 md:p-16 rounded-3xl mt-8">
                 <h2 className="text-sm font-semibold tracking-widest uppercase text-background/50 mb-8">{t("labels.results")}</h2>
                 <p className="text-2xl md:text-4xl font-medium leading-tight">
                   "{t(`${slug}.results`)}"
                 </p>
+              </motion.div>
+
+              {/* Architecture & Services Connection */}
+              <motion.div variants={fadeInUp} className="rounded-3xl border border-border/60 bg-card p-8 md:p-10 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div className="space-y-2">
+                  <span className="text-xs uppercase font-mono tracking-wider text-muted-foreground font-semibold">
+                    {t("labels.relatedService")}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-foreground">
+                    {t("labels.architectureTitle")}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-xl">
+                    {t("labels.architectureDesc")}
+                  </p>
+                </div>
+                <Link
+                  href="/services"
+                  className={cn(
+                    buttonVariants({ size: "default", variant: "outline" }),
+                    "rounded-full px-6 text-xs tracking-wider font-semibold border-border/60 hover:bg-foreground hover:text-background dark:hover:bg-foreground dark:hover:text-background transition-colors shrink-0 gap-2"
+                  )}
+                >
+                  <span>{t("labels.exploreServices")}</span>
+                  <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                </Link>
               </motion.div>
 
             </div>

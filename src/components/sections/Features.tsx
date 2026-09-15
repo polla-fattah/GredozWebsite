@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
 import { Database, X, LayoutGrid, Percent } from "lucide-react"
+import { TechGrid } from "@/components/ui/background-patterns"
 
 export function Features() {
   const t = useTranslations("Features")
@@ -32,8 +33,9 @@ export function Features() {
   ]
 
   return (
-    <section className="py-24 md:py-40 bg-background overflow-hidden">
-      <div className="container max-w-7xl mx-auto px-4">
+    <section className="relative py-24 md:py-40 bg-background overflow-hidden">
+      <TechGrid mask="faded" />
+      <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"

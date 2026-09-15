@@ -1,6 +1,6 @@
 "use client"
 
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
 import { Card, CardContent } from "@/components/ui/card"
@@ -11,10 +11,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Triangle, ChevronLeft, ChevronRight } from "lucide-react"
+import { Triangle } from "lucide-react"
 
 export function Testimonials() {
   const t = useTranslations("Testimonials")
+  const locale = useLocale()
+  const isRtl = locale === "ar" || locale === "ku"
 
   const reviews = Array.from({ length: 4 }).map(() => ({
     review: t("review"),
@@ -29,6 +31,7 @@ export function Testimonials() {
           opts={{
             align: "start",
             loop: true,
+            direction: isRtl ? "rtl" : "ltr",
           }}
           className="w-full"
         >
@@ -53,9 +56,9 @@ export function Testimonials() {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="w-full">
-              <CarouselContent className="-ml-4">
+              <CarouselContent className="-ml-4 rtl:-mr-4 rtl:ml-0">
                 {reviews.map((item, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2">
+                  <CarouselItem key={index} className="pl-4 rtl:pr-4 rtl:pl-0 md:basis-1/2">
                     <div className="h-full">
                       <Card className="h-full border-none bg-muted/20 hover:bg-muted/30 transition-colors rounded-3xl p-6 md:p-8">
                         <CardContent className="flex flex-col gap-8 p-0 h-full">

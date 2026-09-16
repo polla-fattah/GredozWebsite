@@ -71,7 +71,7 @@ export default function ContactPage() {
     setIsSubmitting(true)
     // Simulate network delay
     await new Promise((resolve) => setTimeout(resolve, 800))
-    console.log("Contact Form Submission (NexStudio Erbil):", data)
+    console.log("Contact Form Submission (Gredoz Erbil):", data)
     setIsSubmitting(false)
     setIsSubmitted(true)
   }

@@ -62,10 +62,66 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await getTranslations({ locale: (await params).locale, namespace: "Navbar" });
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
   return {
-    title: "NexStudio Clone",
-    description: "Generated for the NexStudio design system",
+    metadataBase: new URL("https://gredoz.com"),
+    title: {
+      template: `%s | ${t("defaultTitle")}`,
+      default: t("defaultTitle"),
+    },
+    description: t("defaultDescription"),
+    keywords: ["software development", "web apps", "mobile apps", "Gredoz", "Erbil", "Kurdistan", "UI/UX design", "digital products"],
+    authors: [{ name: "Gredoz" }],
+    creator: "Gredoz",
+    publisher: "Gredoz",
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        "en": "/en",
+        "ar": "/ar",
+        "ku": "/ku",
+        "x-default": "/en",
+      },
+    },
+    openGraph: {
+      title: {
+        template: `%s | ${t("defaultTitle")}`,
+        default: t("defaultTitle"),
+      },
+      description: t("defaultDescription"),
+      url: `https://gredoz.com/${locale}`,
+      siteName: t("defaultTitle"),
+      locale: locale,
+      type: "website",
+      images: [
+        {
+          url: "/images/isometric_financial_dashboard.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Gredoz Software Solutions",
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: {
+        template: `%s | ${t("defaultTitle")}`,
+        default: t("defaultTitle"),
+      },
+      description: t("defaultDescription"),
+      images: ["/images/isometric_financial_dashboard.jpg"],
+    },
+    icons: {
+      icon: [
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      ],
+      apple: [
+        { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      ],
+    },
+    manifest: "/site.webmanifest",
   };
 }
 

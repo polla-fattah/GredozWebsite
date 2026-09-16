@@ -15,7 +15,7 @@
     "about": "About",
     "contact": "Contact",
     "company": "Company",
-    "copyright": "© 2026 NexStudio. All rights reserved.",
+    "copyright": "© 2026 Gredoz. All rights reserved.",
     "links": {
       "productDevelopment": "Product Development",
       "enterpriseSystems": "Enterprise Systems",
@@ -83,7 +83,7 @@
     "explore": "EXPLORE ALL SERVICES"
   },
   "Projects": {
-    "title": "NexStudio <italic>Projects</italic>",
+    "title": "Gredoz <italic>Projects</italic>",
     "subtitle": "A showcase of high-impact web applications, enterprise systems, and scalable digital products engineered for modern businesses.",
     "p1_title": "Financial Management System",
     "p1_badge": "WEB APP",
@@ -117,7 +117,7 @@
     "role": "Marketing Manager at GlobalTech Solutions."
   },
   "Blog": {
-    "title": "NexStudio <italic>Blogs</italic>",
+    "title": "Gredoz <italic>Blogs</italic>",
     "b1_badge": "APP DESIGN",
     "b1_date": "JUN 2026",
     "b1_title": "The Future of Web UX: Trends That Will Shape 2027",
@@ -213,7 +213,7 @@
     "story": {
       "badge": "OUR STORY",
       "title": "Rooted in Erbil, Building for the <italic>Global Stage</italic>",
-      "p1": "Founded in Erbil, Iraq, NexStudio was established with a bold mission: to deliver world-class software engineering, thoughtful design, and trusted technical partnership to businesses across Iraq, the Kurdistan Region, and worldwide.",
+      "p1": "Founded in Erbil, Iraq, Gredoz was established with a bold mission: to deliver world-class software engineering, thoughtful design, and trusted technical partnership to businesses across Iraq, the Kurdistan Region, and worldwide.",
       "p2": "We believe modern software is the ultimate engine of business transformation. By marrying deep regional understanding with international engineering standards, we build digital infrastructure that scales effortlessly and drives tangible competitive advantage."
     },
     "missionVision": {
@@ -327,7 +327,7 @@
       "locationAddress": "Erbil, Kurdistan Region, Iraq",
       "locationNote": "Available for in-person technical workshops and consultations.",
       "emailTitle": "Direct Email",
-      "emailAddress": "contact@nexstudio.io",
+      "emailAddress": "contact@gredoz.io",
       "phoneTitle": "Phone & WhatsApp",
       "phoneNumber": "+964 (0) 750 123 4567",
       "hoursTitle": "Working Hours",
@@ -531,5 +531,29 @@
     "heroSubtitle": "A showcase of high-impact web applications, enterprise systems, and scalable digital products engineered for modern businesses.",
     "exploreServices": "EXPLORE SERVICES",
     "startProject": "START A PROJECT"
+  },
+  "Metadata": {
+    "defaultTitle": "Gredoz Software Solutions",
+    "defaultDescription": "We build digital products that drive growth. From startups to global brands, we design, develop, and deliver high-performing web and mobile solutions.",
+    "Home": {
+      "title": "Home",
+      "description": "Welcome to Gredoz Software Solutions. We build digital products that drive growth. Custom software, web apps, and mobile solutions."
+    },
+    "About": {
+      "title": "About Us",
+      "description": "Learn about Gredoz. A team of builders and innovators combining creativity with engineering discipline to build products that users love."
+    },
+    "Services": {
+      "title": "Our Services",
+      "description": "Explore our services: Web App Development, Mobile App Development, API & Backend Solutions, Maintenance & Growth."
+    },
+    "Projects": {
+      "title": "Projects",
+      "description": "A showcase of high-impact web applications, enterprise systems, and scalable digital products engineered for modern businesses."
+    },
+    "Contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with Gredoz Software Solutions. We are ready to help you transform complex problems into simple, elegant solutions."
+    }
   }
 }

@@ -32,8 +32,17 @@ export function Navbar() {
         <div className="container flex h-14 max-w-5xl mx-auto items-center justify-between px-6 rounded-full border border-border/40 bg-background/70 backdrop-blur-md shadow-sm">
           {/* Logo */}
           <div className="flex items-center gap-4 md:gap-2">
-            <Link href="/" className="font-bold text-xl tracking-tighter">
-              NexStudio
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/logo/logo-black.png" 
+                alt="Gredoz Logo" 
+                className="block dark:hidden h-6 w-auto" 
+              />
+              <img 
+                src="/logo/logo-white.png" 
+                alt="Gredoz Logo" 
+                className="hidden dark:block h-6 w-auto" 
+              />
             </Link>
           </div>
 

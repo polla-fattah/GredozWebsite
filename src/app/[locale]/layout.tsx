@@ -153,8 +153,7 @@ export default async function LocaleLayout({
           <SmoothScroll>
             <ThemeProvider
               attribute="class"
-              defaultTheme="system"
-              enableSystem
+              defaultTheme="dark"
               disableTransitionOnChange
             >
               <Navbar />

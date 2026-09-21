@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
-import { TechGrid } from "@/components/ui/background-patterns"
+import { TechGrid , AmbientGlow } from "@/components/ui/background-patterns"
 import { Link } from "@/i18n/routing"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -22,6 +22,7 @@ export function Services() {
   return (
     <section id="services" className="relative py-24 md:py-40 bg-background overflow-hidden">
       <TechGrid mask="faded" />
+      <AmbientGlow position="center" className="opacity-40" />
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
@@ -43,7 +44,7 @@ export function Services() {
               <motion.div 
                 key={index}
                 variants={fadeInUp}
-                className="group flex flex-col md:flex-row md:items-center gap-4 md:gap-12 p-6 md:p-10 rounded-3xl border border-border/60 bg-card hover:border-foreground/30 hover:shadow-sm transition-all"
+                className="group flex flex-col md:flex-row md:items-center gap-4 md:gap-12 p-6 md:p-10 rounded-3xl border border-border/60 bg-card/40 backdrop-blur-xl hover:border-foreground/30 hover:shadow-sm transition-all"
               >
                 <div className="text-sm font-semibold text-foreground/50 bg-muted px-4 py-2 rounded-full w-fit shrink-0">
                   0{index + 1}

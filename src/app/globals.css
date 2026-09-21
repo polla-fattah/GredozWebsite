@@ -120,16 +120,8 @@
   * {
     @apply border-border outline-ring/50;
   }
-  ::selection {
-    background-color: var(--foreground);
-    color: var(--background);
-  }
-  ::-moz-selection {
-    background-color: var(--foreground);
-    color: var(--background);
-  }
   body {
-    @apply bg-background text-foreground selection:bg-foreground selection:text-background;
+    @apply bg-background text-foreground selection:bg-foreground/20 selection:text-foreground;
   }
   html {
     @apply font-sans;

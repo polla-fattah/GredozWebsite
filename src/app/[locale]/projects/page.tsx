@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { ArrowRight } from "lucide-react"
+import { TechGrid, AmbientGlow } from "@/components/ui/background-patterns"
 
 export default function ProjectsPage() {
   const t = useTranslations("Projects")
@@ -55,8 +56,14 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <div className="bg-background min-h-screen pt-28 md:pt-36 pb-24">
-      <div className="container max-w-7xl mx-auto px-4">
+    <div className="relative bg-background min-h-screen pb-24">
+      {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
+      <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
+        <TechGrid mask="hero" />
+        <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+      </div>
+
+      <div className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -66,7 +73,7 @@ export default function ProjectsPage() {
           {/* Header section matching About and Services */}
           <div className="flex flex-col gap-8 md:gap-12">
             <motion.div variants={fadeInUp} className="max-w-5xl">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.3] py-2">
                 {tPage.rich("heroTitle", {
                   italic: (chunks) => <span>{chunks}</span>
                 })}

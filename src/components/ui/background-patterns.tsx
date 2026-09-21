@@ -5,7 +5,6 @@ interface TechGridProps {
   className?: string
   variant?: "light" | "dark" | "auto"
   mask?: "hero" | "faded" | "top" | "none"
-  showCrosshairs?: boolean
 }
 
 /**
@@ -15,7 +14,6 @@ export function TechGrid({
   className,
   variant = "auto",
   mask = "hero",
-  showCrosshairs = true,
 }: TechGridProps) {
   const maskClass =
     mask === "hero"
@@ -42,24 +40,7 @@ export function TechGrid({
         maskClass,
         className
       )}
-    >
-      {showCrosshairs && (
-        <div className="absolute inset-0 opacity-40">
-          <span className="absolute top-[15%] left-[20%] text-[10px] font-mono text-muted-foreground/60 select-none">
-            +
-          </span>
-          <span className="absolute top-[35%] right-[25%] text-[10px] font-mono text-muted-foreground/60 select-none">
-            +
-          </span>
-          <span className="absolute top-[60%] left-[15%] text-[10px] font-mono text-muted-foreground/60 select-none">
-            +
-          </span>
-          <span className="absolute top-[75%] right-[18%] text-[10px] font-mono text-muted-foreground/60 select-none">
-            +
-          </span>
-        </div>
-      )}
-    </div>
+    />
   )
 }
 
@@ -266,7 +247,7 @@ export function CadCornerBrackets({
 
 
 /**
- * Soft ambient radial gradient glow behind cards or headings.
+ * Soft ambient radial gradient glow behind cards or headings, similar to modern Tailwind styling.
  */
 export function AmbientGlow({
   className,
@@ -277,20 +258,36 @@ export function AmbientGlow({
 }) {
   const positionClass =
     position === "top"
-      ? "top-0 left-1/2 -translate-x-1/2"
+      ? "top-[-20%] left-1/2 -translate-x-1/2"
       : position === "bottom"
-      ? "bottom-0 left-1/2 -translate-x-1/2"
+      ? "bottom-[-20%] left-1/2 -translate-x-1/2"
       : "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
 
   return (
     <div
       aria-hidden="true"
       className={cn(
-        "absolute pointer-events-none select-none rounded-full blur-3xl opacity-40",
-        "w-[500px] h-[300px] bg-gradient-to-tr from-muted/30 via-foreground/5 to-transparent",
+        "absolute pointer-events-none select-none blur-[100px] opacity-40 md:opacity-30 mix-blend-screen dark:mix-blend-lighten",
+        "w-[80vw] max-w-[900px] h-[300px] md:h-[500px]",
         positionClass,
         className
       )}
-    />
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-cyan-400/30 to-purple-500/30 rounded-full transform -rotate-12" />
+      <div className="absolute inset-10 bg-gradient-to-tr from-indigo-500/20 to-teal-400/20 rounded-full mix-blend-overlay transform rotate-12" />
+    </div>
   )
+}
+
+
+/**
+ * Elegant architectural grid lines that act like borders, fading out at the edges.
+ * Adds a highly premium feel to section backgrounds.
+ */
+export function GridLines({
+  className,
+}: {
+  className?: string
+}) {
+  return null
 }

@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero"
-import { TrustedPartners } from "@/components/sections/TrustedPartners"
+// import { TrustedPartners } from "@/components/sections/TrustedPartners"
 import { AboutStats } from "@/components/sections/AboutStats"
 import { Services } from "@/components/sections/Services"
 import { Process } from "@/components/sections/Process"
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <TrustedPartners />
+      {/* <TrustedPartners /> */}
       <AboutStats />
       <Services />
       <Process />

@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useTranslations } from "next-intl"
 import { motion, AnimatePresence } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
-import { TechGrid } from "@/components/ui/background-patterns"
+import { TechGrid , AmbientGlow } from "@/components/ui/background-patterns"
 import { Plus, Minus, HelpCircle } from "lucide-react"
 
 export function Faq() {
@@ -27,6 +27,7 @@ export function Faq() {
   return (
     <section id="faq" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden border-t border-background/10">
       <TechGrid variant="dark" mask="faded" />
+      <AmbientGlow position="center" className="opacity-40" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
@@ -56,7 +57,7 @@ export function Faq() {
               return (
                 <div
                   key={index}
-                  className="rounded-3xl border border-background/10 bg-background/5 overflow-hidden transition-all shadow-none"
+                  className="rounded-3xl border border-background/10 bg-background/5 backdrop-blur-xl overflow-hidden transition-all shadow-none"
                 >
                   <button
                     type="button"

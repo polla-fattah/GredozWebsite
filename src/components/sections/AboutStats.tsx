@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
 import { Link } from "@/i18n/routing"
 import { ArrowRight } from "lucide-react"
-import { TechGrid, NodeTopologyGraph } from "@/components/ui/background-patterns"
+import { TechGrid, NodeTopologyGraph , AmbientGlow } from "@/components/ui/background-patterns"
 
 export function AboutStats() {
   const t = useTranslations("About")
@@ -15,6 +15,7 @@ export function AboutStats() {
     <section id="about" className="relative py-24 md:py-40 bg-foreground text-background overflow-hidden">
       {/* Blueprint Grid & Topological System Graph */}
       <TechGrid variant="dark" mask="faded" />
+      <AmbientGlow position="center" className="opacity-40" />
       <NodeTopologyGraph color="background" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">

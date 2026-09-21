@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
-import { TechGrid } from "@/components/ui/background-patterns"
+import { TechGrid , AmbientGlow } from "@/components/ui/background-patterns"
 import { 
   Compass, 
   Layers, 
@@ -51,6 +51,7 @@ export function Process() {
   return (
     <section id="process" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden">
       <TechGrid variant="dark" mask="faded" />
+      <AmbientGlow position="center" className="opacity-40" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
@@ -78,7 +79,7 @@ export function Process() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl border border-background/10 bg-background/5 hover:border-background/30 hover:bg-background/10 transition-all shadow-none"
+                className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl border border-background/10 bg-background/5 backdrop-blur-xl hover:border-background/30 hover:bg-background/10 transition-all shadow-none"
               >
 
                 <div className="flex flex-col gap-5">

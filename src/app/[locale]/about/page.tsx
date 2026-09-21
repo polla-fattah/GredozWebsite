@@ -18,7 +18,8 @@ import {
 import {
   TechGrid,
   NodeTopologyGraph,
-  AmbientGlow
+  AmbientGlow,
+  GridLines
 } from "@/components/ui/background-patterns"
 
 export default function AboutPage() {
@@ -48,13 +49,15 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="relative bg-background min-h-screen pt-28 md:pt-36 pb-24 overflow-hidden">
-      {/* Background Architectural Grid & Depth */}
-      <TechGrid mask="hero" />
-      <AmbientGlow position="top" className="opacity-25" />
+    <div className="relative bg-background min-h-screen pb-24">
+      {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
+      <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
+        <TechGrid mask="hero" />
+        <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+      </div>
 
       {/* Hero Section */}
-      <section className="container max-w-7xl mx-auto px-4 relative z-10">
+      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -63,7 +66,7 @@ export default function AboutPage() {
         >
           {/* Main Headline (All normal font, no italic, no badges) */}
           <motion.div variants={fadeInUp} className="max-w-5xl">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.3] py-2">
               {t.rich("heroTitle", {
                 italic: (chunks) => <span>{chunks}</span>
               })}
@@ -140,7 +143,10 @@ export default function AboutPage() {
       </section>
 
       {/* Story & Mission Section (No Badges, No Italics) */}
-      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-40">
+      <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
+        <TechGrid mask="faded" />
+        <AmbientGlow position="center" className="opacity-40" />
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -164,7 +170,7 @@ export default function AboutPage() {
           {/* Right Column: Mission & Vision Cards */}
           <motion.div variants={fadeInUp} className="lg:col-span-6 flex flex-col gap-6">
             {/* Mission */}
-            <Card className="rounded-[2rem] border border-border/60 bg-card p-6 md:p-8 shadow-sm">
+            <Card className="rounded-[2rem] border border-border/60 bg-card/40 backdrop-blur-xl p-6 md:p-8 shadow-sm">
               <CardContent className="p-0 flex flex-col gap-3">
                 <h3 className="text-2xl font-medium tracking-tight text-foreground">
                   {t("missionVision.missionTitle")}
@@ -176,7 +182,7 @@ export default function AboutPage() {
             </Card>
 
             {/* Vision */}
-            <Card className="rounded-[2rem] border border-border/60 bg-card p-6 md:p-8 shadow-sm">
+            <Card className="rounded-[2rem] border border-border/60 bg-card/40 backdrop-blur-xl p-6 md:p-8 shadow-sm">
               <CardContent className="p-0 flex flex-col gap-3">
                 <h3 className="text-2xl font-medium tracking-tight text-foreground">
                   {t("missionVision.visionTitle")}
@@ -188,12 +194,16 @@ export default function AboutPage() {
             </Card>
           </motion.div>
         </motion.div>
+        </div>
       </section>
 
 
 
       {/* Values & Principles Section (No Badges, No Italics) */}
-      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-40">
+      <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
+        <TechGrid mask="faded" />
+        <AmbientGlow position="center" className="opacity-40" />
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -212,7 +222,7 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((val, i) => (
               <motion.div key={i} variants={fadeInUp}>
-                <div className="rounded-3xl border border-border/60 bg-card p-6 md:p-8 flex flex-col gap-5 h-full transition-colors hover:border-foreground/30">
+                <div className="rounded-3xl border border-border/60 bg-card/40 backdrop-blur-xl p-6 md:p-8 flex flex-col gap-5 h-full transition-colors hover:border-foreground/30">
                   <div className="p-3 rounded-2xl bg-muted w-fit border border-border/40">
                     {val.icon}
                   </div>
@@ -227,6 +237,7 @@ export default function AboutPage() {
             ))}
           </div>
         </motion.div>
+        </div>
       </section>
 
       {/* Erbil Tech Hub Section (Clean, Monochrome, No Badges, No Colorful Icons) */}
@@ -239,6 +250,7 @@ export default function AboutPage() {
         >
           <div className="rounded-3xl border border-border/60 bg-foreground text-background p-8 md:p-14 lg:p-16 relative overflow-hidden">
             <TechGrid variant="dark" mask="faded" />
+            <AmbientGlow position="center" className="opacity-40" />
             <NodeTopologyGraph color="background" />
             <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
               <div className="lg:col-span-7 flex flex-col gap-6">
@@ -288,6 +300,7 @@ export default function AboutPage() {
           className="rounded-3xl border border-border/60 bg-card p-10 md:p-16 text-center flex flex-col items-center gap-8 shadow-sm relative overflow-hidden"
         >
           <TechGrid mask="faded" />
+          <AmbientGlow position="center" className="opacity-40" />
           <div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
               {t("cta.title")}

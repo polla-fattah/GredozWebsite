@@ -8,7 +8,8 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { 
   TechGrid, 
-  AmbientGlow 
+  AmbientGlow,
+  GridLines
 } from "@/components/ui/background-patterns"
 import { 
   Cpu, 
@@ -152,13 +153,15 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="relative bg-background min-h-screen pt-28 md:pt-36 pb-24 overflow-hidden">
-      {/* Background Architectural Grid & Depth */}
-      <TechGrid mask="hero" />
-      <AmbientGlow position="top" className="opacity-25" />
+    <div className="relative bg-background min-h-screen pb-24">
+      {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
+      <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
+        <TechGrid mask="hero" />
+        <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+      </div>
 
       {/* Hero Section */}
-      <section className="container max-w-7xl mx-auto px-4 relative z-10">
+      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -167,7 +170,7 @@ export default function ServicesPage() {
         >
           {/* Main Headline (Clean typography, no badges, no italics) */}
           <motion.div variants={fadeInUp} className="max-w-5xl">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.3] py-2">
               {t.rich("title", {
                 italic: (chunks) => <span>{chunks}</span>
               })}
@@ -213,7 +216,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Core Offerings Deep-Dive Section */}
-      <section id="offerings" className="container max-w-7xl mx-auto px-4 pt-28 md:pt-40 scroll-mt-24 relative z-10">
+      <section id="offerings" className="relative overflow-hidden pt-28 md:pt-40 scroll-mt-24 z-10">
+        <TechGrid mask="faded" />
+        <AmbientGlow position="center" className="opacity-40" />
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -238,8 +244,9 @@ export default function ServicesPage() {
             {offerings.map((offering, index) => (
               <motion.div
                 key={index}
+                id={`service-${index + 1}`}
                 variants={fadeInUp}
-                className="rounded-3xl border border-border/60 bg-card p-8 sm:p-10 md:p-14 relative overflow-hidden group shadow-sm transition-colors hover:border-foreground/30"
+                className="rounded-3xl border border-border/60 bg-card p-8 sm:p-10 md:p-14 relative overflow-hidden group shadow-sm transition-colors hover:border-foreground/30 scroll-mt-24"
               >
 
                 <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
@@ -325,10 +332,14 @@ export default function ServicesPage() {
             ))}
           </div>
         </motion.div>
+        </div>
       </section>
 
       {/* Engineering Standards Section */}
-      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-40 relative z-10">
+      <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
+        <TechGrid mask="faded" />
+        <AmbientGlow position="center" className="opacity-40" />
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -365,6 +376,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </motion.div>
+        </div>
       </section>
 
       {/* Bottom CTA Banner */}
@@ -377,6 +389,7 @@ export default function ServicesPage() {
           className="rounded-3xl border border-border/60 bg-card p-10 md:p-16 text-center flex flex-col items-center gap-8 shadow-sm relative overflow-hidden"
         >
           <TechGrid mask="faded" />
+          <AmbientGlow position="center" className="opacity-40" />
           <div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
               {t("cta.title")}

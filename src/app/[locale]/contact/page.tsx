@@ -19,7 +19,7 @@ import {
   Loader2,
   Check
 } from "lucide-react"
-import { TechGrid, AmbientGlow } from "@/components/ui/background-patterns"
+import { TechGrid, AmbientGlow, GridLines } from "@/components/ui/background-patterns"
 
 export default function ContactPage() {
   const t = useTranslations("ContactPage")
@@ -69,11 +69,35 @@ export default function ContactPage() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
-    // Simulate network delay
-    await new Promise((resolve) => setTimeout(resolve, 800))
-    console.log("Contact Form Submission (Gredoz Erbil):", data)
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/mwhaemnluqman2@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          Name: data.fullName,
+          Email: data.email,
+          Phone: data.phone || "Not provided",
+          Company: data.company || "Not provided",
+          Service: data.service,
+          Message: data.message,
+          _subject: `New Contact Request: ${data.service} - ${data.fullName}`,
+          _template: "box", // Beautiful email template
+        }),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        console.error("Form submission failed")
+      }
+    } catch (error) {
+      console.error("Error submitting form", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleReset = () => {
@@ -82,12 +106,14 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="relative bg-background min-h-screen pt-28 md:pt-36 pb-24 overflow-hidden">
-      {/* Background Architectural Grid & Depth */}
-      <TechGrid mask="hero" />
-      <AmbientGlow position="top" className="opacity-25" />
+    <div className="relative bg-background min-h-screen pb-24">
+      {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
+      <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
+        <TechGrid mask="hero" />
+        <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+      </div>
 
-      <div className="container max-w-7xl mx-auto px-4 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -96,7 +122,7 @@ export default function ContactPage() {
         >
           {/* Header (No badges, all normal font, no italic) */}
           <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.3] py-2">
               {t.rich("title", {
                 italic: (chunks) => <span>{chunks}</span>,
               })}
@@ -108,9 +134,9 @@ export default function ContactPage() {
           </motion.div>
 
           {/* Main Grid: Info + Form */}
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
             {/* Left Column: Office Details, Direct Channels & Timeline */}
-            <motion.div variants={fadeInUp} className="lg:col-span-5 flex flex-col gap-8">
+            <motion.div variants={fadeInUp} className="lg:col-span-5 flex flex-col gap-8 h-full">
               {/* Erbil Office Card */}
               <Card className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 shadow-sm relative overflow-hidden group">
                 <CardContent className="p-0 flex flex-col gap-6">
@@ -171,7 +197,9 @@ export default function ContactPage() {
                         </span>
                         <a
                           href={`tel:${t("info.phoneNumber")}`}
-                          className="text-base font-medium text-foreground hover:underline dir-ltr text-start"
+                          className="text-base font-medium text-foreground hover:underline w-fit"
+                          dir="ltr"
+                          style={{ unicodeBidi: "plaintext" }}
                         >
                           {t("info.phoneNumber")}
                         </a>
@@ -197,7 +225,7 @@ export default function ContactPage() {
               </Card>
 
               {/* What Happens Next - 3 Step Flow */}
-              <div className="rounded-[2.5rem] border border-border/60 bg-card p-6 sm:p-8 flex flex-col gap-5 shadow-sm">
+              <div className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 flex flex-col gap-5 shadow-sm flex-1">
                 <h3 className="text-xl font-medium tracking-tight text-foreground">
                   {t.rich("process.title", {
                     italic: (chunks) => <span>{chunks}</span>,
@@ -251,14 +279,14 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Right Column: React Hook Form with Zod Validation */}
-            <motion.div variants={fadeInUp} className="lg:col-span-7">
-              <Card className="rounded-3xl border border-border/60 bg-card p-6 sm:p-10 shadow-sm relative overflow-hidden group">
-                <CardContent className="p-0">
+            <motion.div variants={fadeInUp} className="lg:col-span-7 h-full">
+              <Card className="rounded-3xl border border-border/60 bg-card p-6 sm:p-10 shadow-sm relative overflow-hidden group h-full">
+                <CardContent className="p-0 h-full flex flex-col justify-center">
                   {isSubmitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="py-12 flex flex-col items-center text-center gap-6"
+                      className="py-12 flex flex-col items-center justify-center text-center gap-6 min-h-[550px] sm:min-h-[600px]"
                     >
                       <div className="w-16 h-16 rounded-3xl bg-muted text-foreground flex items-center justify-center border border-border/60">
                         <Check className="w-8 h-8 stroke-[2]" />
@@ -337,7 +365,8 @@ export default function ContactPage() {
                             type="tel"
                             placeholder={t("form.phonePlaceholder")}
                             {...register("phone")}
-                            className="h-12 px-4 rounded-2xl border border-border/60 bg-background text-foreground text-sm transition-colors placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-foreground/20"
+                            className="h-12 px-4 rounded-2xl border border-border/60 bg-background text-foreground text-sm transition-colors placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-foreground/20 text-left"
+                            dir="ltr"
                           />
                         </div>
 

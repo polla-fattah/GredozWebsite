@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations"
 import { Link } from "@/i18n/routing"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { TechGrid } from "@/components/ui/background-patterns"
+import { TechGrid , AmbientGlow } from "@/components/ui/background-patterns"
 import { 
   Users2, 
   Workflow, 
@@ -90,6 +90,7 @@ export function EngagementModels() {
   return (
     <section id="engagement" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden">
       <TechGrid variant="dark" mask="faded" />
+      <AmbientGlow position="center" className="opacity-40" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
@@ -118,7 +119,7 @@ export function EngagementModels() {
                 key={i}
                 variants={fadeInUp}
                 className={cn(
-                  "relative flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-3xl border transition-all shadow-none group",
+                  "relative flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-3xl border transition-all shadow-none group backdrop-blur-xl",
                   model.highlight
                     ? "border-background/30 bg-background/10"
                     : "border-background/10 bg-background/5 hover:border-background/30 hover:bg-background/10"

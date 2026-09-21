@@ -4,6 +4,9 @@ import { useTranslations, useLocale } from "next-intl"
 import { Link } from "@/i18n/routing"
 export function Footer() {
   const t = useTranslations("Footer")
+  const tNav = useTranslations("Navbar")
+  const tS = useTranslations("ServicesPage")
+  const tP = useTranslations("Projects")
   const locale = useLocale()
 
   return (
@@ -18,50 +21,35 @@ export function Footer() {
             />
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-24">
-            <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-white text-sm mb-2">{t("useCases")}</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.productDevelopment")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.enterpriseSystems")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.saasDashboards")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.webApplications")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.aiResearchSolutions")}</Link>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-white text-sm mb-2">{t("services")}</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.softwareDevelopment")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.webDevelopment")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.appDevelopment")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.uiuxDesign")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.productStrategy")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.maintenance")}</Link>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-white text-sm mb-2">{t("resources")}</h4>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.engineering")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.resources")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.news")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.documentation")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.guides")}</Link>
-            </div>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
             <div className="flex flex-col gap-4">
               <h4 className="font-medium text-white text-sm mb-2">{t("company")}</h4>
+              <Link href="/" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("home")}</Link>
               <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">{t("about")}</Link>
+              <Link href="/services" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("services")}</Link>
+              <Link href="/projects" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("projects")}</Link>
               <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">{t("contact")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.leadership")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.terms")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.careers")}</Link>
-              <Link href="#" className="text-sm text-white/50 hover:text-white transition-colors">{t("links.investors")}</Link>
+            </div>
+
+            <div className="flex flex-col gap-4 lg:col-span-2">
+              <h4 className="font-medium text-white text-sm mb-2">{tNav("services")}</h4>
+              <Link href="/services#service-1" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s1.title")}</Link>
+              <Link href="/services#service-2" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s2.title")}</Link>
+              <Link href="/services#service-3" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s3.title")}</Link>
+              <Link href="/services#service-4" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s4.title")}</Link>
+              <Link href="/services#service-5" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s5.title")}</Link>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <h4 className="font-medium text-white text-sm mb-2">{tNav("projects")}</h4>
+              <Link href="/projects/financial-management" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p1_title")}</Link>
+              <Link href="/projects/ecommerce-dashboard" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p2_title")}</Link>
+              <Link href="/projects/financial-management" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p3_title")}</Link>
+              <Link href="/projects/ecommerce-dashboard" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p4_title")}</Link>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-white/50 w-full px-4 border-t border-white/10 pt-8">
-            <div className="flex gap-4">
-              <Link href="#" className="hover:text-white transition-colors">{t("links.termsAndConditions")}</Link>
-            </div>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-xs font-medium text-white/50 w-full px-4 border-t border-white/10 pt-8">
             <p>{t("copyright")}</p>
           </div>
         </div>

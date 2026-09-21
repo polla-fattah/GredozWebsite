@@ -60,7 +60,7 @@ export function Testimonials() {
                 {reviews.map((item, index) => (
                   <CarouselItem key={index} className="pl-4 rtl:pr-4 rtl:pl-0 md:basis-1/2">
                     <div className="h-full">
-                      <Card className="h-full border-none bg-muted/20 hover:bg-muted/30 transition-colors rounded-3xl p-6 md:p-8">
+                      <Card className="h-full border-none bg-muted/20 backdrop-blur-xl hover:bg-muted/30 transition-colors rounded-3xl p-6 md:p-8">
                         <CardContent className="flex flex-col gap-8 p-0 h-full">
                           <div className="flex items-center gap-2 text-xl font-bold tracking-tighter opacity-40">
                             <Triangle className="w-6 h-6 fill-current" /> LOGOSIPUM

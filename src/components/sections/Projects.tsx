@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
-import { TechGrid } from "@/components/ui/background-patterns"
+import { TechGrid, AmbientGlow } from "@/components/ui/background-patterns"
 import { ArrowRight } from "lucide-react"
 
 export function Projects() {
@@ -58,6 +58,7 @@ export function Projects() {
     <section id="projects" className="relative py-24 md:py-36 bg-background overflow-hidden border-t border-border/40">
       {/* Blueprint Grid & Vector Graph Background */}
       <TechGrid mask="faded" />
+      <AmbientGlow position="center" className="opacity-40" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
@@ -96,7 +97,7 @@ export function Projects() {
             {projects.map((project, i) => (
               <motion.div key={i} variants={fadeInUp}>
                 <Link href={`/projects/${project.slug}`} className="block h-full">
-                  <Card className="group overflow-hidden border border-border/40 bg-card/50 hover:bg-card hover:border-foreground/20 shadow-sm cursor-pointer p-3 rounded-[1.5rem] h-full transition-all duration-300 relative">
+                  <Card className="group overflow-hidden border border-border/40 bg-card/40 backdrop-blur-xl hover:bg-card/60 hover:border-foreground/20 shadow-sm cursor-pointer p-3 rounded-[1.5rem] h-full transition-all duration-300 relative">
                     <CardContent className="p-0 flex flex-col h-full gap-4">
                       {/* Image Container */}
                       <div className="w-full aspect-video rounded-[1rem] overflow-hidden relative border border-border/20 bg-muted">

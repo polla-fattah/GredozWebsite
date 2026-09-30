@@ -9,7 +9,7 @@ Welcome to Gredoz, where the intricacies of technology are seamlessly transforme
 
 
 <div style="width:100%; text-align:center;">
-<img src="/images/logo/gredoz-full-logo.png" alt="Gredoz IT Solutions" style="width: 100%; max-width: 720px;"/>
+<img src="/new-logo.png" alt="Gredoz IT Solutions" style="width: 100%; max-width: 720px;"/>
 </div>
 
 # **Our Journey**

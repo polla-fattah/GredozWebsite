@@ -4,7 +4,7 @@ date: 2018-11-18T12:33:46+10:00
 weight: 1
 ---
 
-At Hezhin, we recognize the pivotal role that web-based applications play in today's digital landscape. Our team, armed with expertise and innovative solutions, crafts seamless and powerful applications designed to elevate your business operations, enhance user engagement, and offer unparalleled scalability.
+At Gredoz, we recognize the pivotal role that web-based applications play in today's digital landscape. Our team, armed with expertise and innovative solutions, crafts seamless and powerful applications designed to elevate your business operations, enhance user engagement, and offer unparalleled scalability.
 
 ## **Backend Development**
 Delve into the core of web application architecture with our robust backend development services:

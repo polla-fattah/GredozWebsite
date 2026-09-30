@@ -34,6 +34,6 @@ We understand the intricacies of modern networks and offer robust solutions to o
 
 ## **Tailored Network Solutions for Modern Challenges**
 
-The digital landscape is constantly evolving, bringing forth new challenges in the realm of network management. Whether you're battling external security threats, internal data traffic bottlenecks, or the need for seamless remote work solutions, Hezhin stands prepared.
+The digital landscape is constantly evolving, bringing forth new challenges in the realm of network management. Whether you're battling external security threats, internal data traffic bottlenecks, or the need for seamless remote work solutions, Gredoz stands prepared.
 
 Our hands-on experience with industry-leading technologies like Cisco and our in-depth understanding of network frameworks mean that we're not just managing networks; we're future-proofing businesses.

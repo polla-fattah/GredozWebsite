@@ -1,13 +1,13 @@
 baseurl: '/'
 permalink: pretty
-title: 'Hezhin'
+title: 'Gredoz'
 
 logo:
-  mobile: "images/logo/hezhin-icon.png"
+  mobile: "images/logo/gredoz-icon.png"
   mobile_height: "32px"
   mobile_width: "32px"
-  desktop: "images/logo/hezhin-long-logo.png"
-  desktop_height: "32px"
+  desktop: "images/logo/gredoz-long-logo.png"
+  desktop_height: "58px"
   desktop_width: "180px"
 
 home: 

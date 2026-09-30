@@ -34,7 +34,7 @@ Our IT Administration services are tailored to ensure that your technological fo
    - Our dedicated helpdesk is always ready to assist with any IT-related queries or issues, ensuring minimal downtime and maintaining productivity.
 
 
-## **Hezhin's Distinct Edge in IT Administration**
+## **Gredoz's Distinct Edge in IT Administration**
 
 - **Proactive Approach**: We don't just react to issues; we anticipate them. Our proactive approach ensures fewer disruptions and more efficient operations.
 
@@ -45,4 +45,4 @@ Our IT Administration services are tailored to ensure that your technological fo
 
 ## **Empower Your Business with Stellar IT Operations**
 
-In the digital age, the role of IT administration extends beyond mere management. It's about creating an environment where technology and business strategies converge for unparalleled success. With Hezhin by your side, experience an IT landscape where efficiency meets innovation, and challenges transform into opportunities.
+In the digital age, the role of IT administration extends beyond mere management. It's about creating an environment where technology and business strategies converge for unparalleled success. With Gredoz by your side, experience an IT landscape where efficiency meets innovation, and challenges transform into opportunities.

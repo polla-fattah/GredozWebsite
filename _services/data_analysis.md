@@ -5,11 +5,11 @@ weight: 2
 ---
 
 
-Data is the heartbeat of the modern business landscape. Its rhythm guides strategies, inspires innovations, and crafts stories. At Hezhin, we're not just listeners to this rhythm; we're the maestros orchestrating it into harmonious symphonies of actionable insights.
+Data is the heartbeat of the modern business landscape. Its rhythm guides strategies, inspires innovations, and crafts stories. At Gredoz, we're not just listeners to this rhythm; we're the maestros orchestrating it into harmonious symphonies of actionable insights.
 
 ## **From Data to Decisions**
 
-Businesses today are inundated with data — from customer interactions and sales metrics to market trends. But raw data, in its natural state, is like an uncut diamond. At Hezhin, we specialize in the meticulous art of chiseling this diamond to reveal its brilliance.
+Businesses today are inundated with data — from customer interactions and sales metrics to market trends. But raw data, in its natural state, is like an uncut diamond. At Gredoz, we specialize in the meticulous art of chiseling this diamond to reveal its brilliance.
 
 
 ## **Page 2: Comprehensive Data Analysis Services**
@@ -36,7 +36,7 @@ Consolidating data can be a mammoth task. With expertise in **Amazon Redshift**,
 
 ## **Unearthing Hidden Treasures with ML**
 
-Machine learning, a subset of AI, goes beyond conventional data analysis, identifying patterns and making predictions with minimal human intervention. At Hezhin, our ML-driven analysis transcends traditional boundaries.
+Machine learning, a subset of AI, goes beyond conventional data analysis, identifying patterns and making predictions with minimal human intervention. At Gredoz, our ML-driven analysis transcends traditional boundaries.
 
 ## **Problem-Solving through ML**
 

@@ -4,7 +4,7 @@ date: 2019-03-28T15:14:54+10:00
 weight: 5
 ---
 
-At Hezhin, we combine cutting-edge technology with functionality, ensuring that your premises and parking areas remain secure while offering quick and convenient access to authorized users and vehicles.
+At Gredoz, we combine cutting-edge technology with functionality, ensuring that your premises and parking areas remain secure while offering quick and convenient access to authorized users and vehicles.
 
 
 ## **Diverse Door Solutions Tailored to Every Need**
@@ -41,4 +41,4 @@ Our commitment to safety and convenience is reflected in our diverse range of id
 
 ## **Advanced Access Solutions**
 
-With Hezhin, experience the future of entrance and parking solutions. From corporate offices and retail establishments to parking areas, we deliver tailored, technology-driven solutions that prioritize both reliability and user convenience.
+With Gredoz, experience the future of entrance and parking solutions. From corporate offices and retail establishments to parking areas, we deliver tailored, technology-driven solutions that prioritize both reliability and user convenience.

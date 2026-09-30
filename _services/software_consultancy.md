@@ -5,7 +5,7 @@ weight: 8
 ---
 
 
-In a digital-first world, every business, regardless of size or sector, is effectively a technology business. However, navigating the complex landscape of software solutions can be daunting. At Hezhin, our mission is to illuminate this journey, offering clear, actionable insights that translate into tangible business outcomes.
+In a digital-first world, every business, regardless of size or sector, is effectively a technology business. However, navigating the complex landscape of software solutions can be daunting. At Gredoz, our mission is to illuminate this journey, offering clear, actionable insights that translate into tangible business outcomes.
 
 
 ## **Our Software Consultancy Services**
@@ -28,7 +28,7 @@ In a digital-first world, every business, regardless of size or sector, is effec
 6. **Ongoing Support & Maintenance**:
    - Our relationship doesn’t end post-implementation. We offer ongoing support, ensuring that as your business evolves, your software solutions evolve with it.
 
-## **Why Hezhin's Software Consultancy?**
+## **Why Gredoz's Software Consultancy?**
 
 - **Industry Expertise**: With a deep understanding of various industries, from retail to finance, we bring specialized insights to the table, ensuring your software solutions are industry-relevant.
 
@@ -44,5 +44,5 @@ In a digital-first world, every business, regardless of size or sector, is effec
 
 ## **Potentials of Software**
 
-In today's dynamic business environment, the right software can be the difference between staying ahead or falling behind. At Hezhin, we ensure you're always on the front foot, leveraging technology to its maximum potential. Let's transform challenges into opportunities, one software solution at a time.
+In today's dynamic business environment, the right software can be the difference between staying ahead or falling behind. At Gredoz, we ensure you're always on the front foot, leveraging technology to its maximum potential. Let's transform challenges into opportunities, one software solution at a time.
 

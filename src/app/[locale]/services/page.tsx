@@ -157,7 +157,7 @@ export default function ServicesPage() {
       {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
       <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
         <TechGrid mask="hero" />
-        <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+        <AmbientGlow position="top-left" className="opacity-50 md:opacity-60" />
       </div>
 
       {/* Hero Section */}
@@ -217,8 +217,6 @@ export default function ServicesPage() {
 
       {/* Core Offerings Deep-Dive Section */}
       <section id="offerings" className="relative overflow-hidden pt-28 md:pt-40 scroll-mt-24 z-10">
-        <TechGrid mask="faded" />
-        <AmbientGlow position="center" className="opacity-40" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
@@ -337,8 +335,6 @@ export default function ServicesPage() {
 
       {/* Engineering Standards Section */}
       <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
-        <TechGrid mask="faded" />
-        <AmbientGlow position="center" className="opacity-40" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
@@ -388,8 +384,6 @@ export default function ServicesPage() {
           viewport={{ once: true, margin: "-80px" }}
           className="rounded-3xl border border-border/60 bg-card p-10 md:p-16 text-center flex flex-col items-center gap-8 shadow-sm relative overflow-hidden"
         >
-          <TechGrid mask="faded" />
-          <AmbientGlow position="center" className="opacity-40" />
           <div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
               {t("cta.title")}

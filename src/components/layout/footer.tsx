@@ -26,6 +26,7 @@ export function Footer() {
               <h4 className="font-medium text-white text-sm mb-2">{t("company")}</h4>
               <Link href="/" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("home")}</Link>
               <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">{t("about")}</Link>
+              <Link href="/team" className="text-sm text-white/50 hover:text-white transition-colors">{t("team")}</Link>
               <Link href="/services" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("services")}</Link>
               <Link href="/projects" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("projects")}</Link>
               <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">{t("contact")}</Link>

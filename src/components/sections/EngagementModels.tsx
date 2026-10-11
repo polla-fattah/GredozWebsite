@@ -90,7 +90,7 @@ export function EngagementModels() {
   return (
     <section id="engagement" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden">
       <TechGrid variant="dark" mask="faded" />
-      <AmbientGlow position="center" className="opacity-40" />
+      <AmbientGlow position="top-left" className="opacity-35 md:opacity-30" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div

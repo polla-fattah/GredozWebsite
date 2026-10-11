@@ -51,7 +51,7 @@ export function Process() {
   return (
     <section id="process" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden">
       <TechGrid variant="dark" mask="faded" />
-      <AmbientGlow position="center" className="opacity-40" />
+      <AmbientGlow position="split" className="opacity-30 md:opacity-25" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div

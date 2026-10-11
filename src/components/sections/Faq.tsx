@@ -27,7 +27,7 @@ export function Faq() {
   return (
     <section id="faq" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden border-t border-background/10">
       <TechGrid variant="dark" mask="faded" />
-      <AmbientGlow position="center" className="opacity-40" />
+      <AmbientGlow position="split" className="opacity-35 md:opacity-30" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div

@@ -21,6 +21,7 @@ import {
   AmbientGlow,
   GridLines
 } from "@/components/ui/background-patterns"
+import { Team } from "@/components/sections/Team"
 
 export default function AboutPage() {
   const t = useTranslations("AboutPage")
@@ -53,7 +54,7 @@ export default function AboutPage() {
       {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
       <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
         <TechGrid mask="hero" />
-        <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+        <AmbientGlow position="top-right" className="opacity-50 md:opacity-60" />
       </div>
 
       {/* Hero Section */}
@@ -144,8 +145,6 @@ export default function AboutPage() {
 
       {/* Story & Mission Section (No Badges, No Italics) */}
       <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
-        <TechGrid mask="faded" />
-        <AmbientGlow position="center" className="opacity-40" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
@@ -201,8 +200,6 @@ export default function AboutPage() {
 
       {/* Values & Principles Section (No Badges, No Italics) */}
       <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
-        <TechGrid mask="faded" />
-        <AmbientGlow position="center" className="opacity-40" />
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}
@@ -249,8 +246,6 @@ export default function AboutPage() {
           viewport={{ once: true, margin: "-80px" }}
         >
           <div className="rounded-3xl border border-border/60 bg-foreground text-background p-8 md:p-14 lg:p-16 relative overflow-hidden">
-            <TechGrid variant="dark" mask="faded" />
-            <AmbientGlow position="center" className="opacity-40" />
             <NodeTopologyGraph color="background" />
             <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
               <div className="lg:col-span-7 flex flex-col gap-6">
@@ -290,6 +285,11 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
+      {/* Team Section */}
+      <div className="pt-12">
+        <Team withGradient={false} />
+      </div>
+
       {/* Bottom CTA Banner (No Badges, Normal Font) */}
       <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36">
         <motion.div
@@ -299,8 +299,6 @@ export default function AboutPage() {
           viewport={{ once: true, margin: "-80px" }}
           className="rounded-3xl border border-border/60 bg-card p-10 md:p-16 text-center flex flex-col items-center gap-8 shadow-sm relative overflow-hidden"
         >
-          <TechGrid mask="faded" />
-          <AmbientGlow position="center" className="opacity-40" />
           <div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
               {t("cta.title")}

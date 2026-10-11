@@ -7,7 +7,7 @@ import { Projects } from "@/components/sections/Projects"
 import { EngagementModels } from "@/components/sections/EngagementModels"
 import { Features } from "@/components/sections/Features"
 import { Faq } from "@/components/sections/Faq"
-import { Testimonials } from "@/components/sections/Testimonials"
+// import { Testimonials } from "@/components/sections/Testimonials"
 import { Cta } from "@/components/sections/Cta"
 
 import { Metadata } from "next"
@@ -36,7 +36,7 @@ export default function Home() {
       <EngagementModels />
       <Features />
       <Faq />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Cta />
     </div>
   )

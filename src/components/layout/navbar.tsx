@@ -82,6 +82,9 @@ export function Navbar() {
             <Link href="/about" className={cn("transition-colors hover:text-foreground", isActive("/about") ? "text-foreground" : "text-foreground/80")}>
               {t("about")}
             </Link>
+            <Link href="/team" className={cn("transition-colors hover:text-foreground", isActive("/team") ? "text-foreground" : "text-foreground/80")}>
+              {t("team")}
+            </Link>
             <Link href="/services" className={cn("transition-colors hover:text-foreground", isActive("/services") ? "text-foreground" : "text-foreground/80")}>
               {t("services")}
             </Link>
@@ -118,6 +121,11 @@ export function Navbar() {
               <DrawerClose asChild>
                 <Link href="/about" className={cn("block px-2 py-1 text-2xl font-medium transition-colors hover:text-foreground", isActive("/about") ? "text-foreground" : "text-muted-foreground")}>
                   {t("about")}
+                </Link>
+              </DrawerClose>
+              <DrawerClose asChild>
+                <Link href="/team" className={cn("block px-2 py-1 text-2xl font-medium transition-colors hover:text-foreground", isActive("/team") ? "text-foreground" : "text-muted-foreground")}>
+                  {t("team")}
                 </Link>
               </DrawerClose>
               <DrawerClose asChild>

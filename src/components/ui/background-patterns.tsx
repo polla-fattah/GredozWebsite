@@ -246,35 +246,133 @@ export function CadCornerBrackets({
 }
 
 
+export type GlowPosition =
+  | "top"
+  | "bottom"
+  | "center"
+  | "top-left"
+  | "top-right"
+  | "bottom-left"
+  | "bottom-right"
+  | "split"
+  | "random"
+
+export type GlowVariant = "default" | "drift" | "aurora" | "spotlight" | "dual"
+
+interface AmbientGlowProps {
+  className?: string
+  position?: GlowPosition
+  variant?: GlowVariant
+  animated?: boolean
+}
+
 /**
- * Soft ambient radial gradient glow behind cards or headings, similar to modern Tailwind styling.
+ * Playful, multi-layered ambient warm orange gradient glow.
+ * Offers varied positions, distinct organic geometries, and subtle floating dynamics
+ * while preserving the brand's signature orange color palette.
  */
 export function AmbientGlow({
   className,
   position = "center",
-}: {
-  className?: string
-  position?: "center" | "top" | "bottom"
-}) {
-  const positionClass =
-    position === "top"
-      ? "top-[-20%] left-1/2 -translate-x-1/2"
-      : position === "bottom"
-      ? "bottom-[-20%] left-1/2 -translate-x-1/2"
-      : "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+  variant = "default",
+  animated = true,
+}: AmbientGlowProps) {
+  // Balanced configurations for varied placements across sections
+  const positionConfigs: Record<
+    GlowPosition,
+    {
+      container: string
+      blob1: string
+      blob2: string
+      blob3?: string
+    }
+  > = {
+    top: {
+      container: "top-[-15%] left-1/2 -translate-x-1/2 w-[90vw] max-w-[1100px] h-[340px] md:h-[520px]",
+      blob1: "w-full h-full -rotate-6 scale-x-110",
+      blob2: "inset-6 rotate-12 scale-95",
+      blob3: "inset-x-16 inset-y-8 -rotate-3 scale-90",
+    },
+    bottom: {
+      container: "bottom-[-15%] left-1/2 -translate-x-1/2 w-[85vw] max-w-[1000px] h-[300px] md:h-[480px]",
+      blob1: "w-full h-full rotate-8 scale-x-105",
+      blob2: "inset-8 -rotate-10 scale-90",
+    },
+    center: {
+      container: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75vw] max-w-[950px] h-[320px] md:h-[500px]",
+      blob1: "w-full h-full -rotate-12 scale-100",
+      blob2: "inset-10 rotate-12 scale-95",
+    },
+    "top-left": {
+      container: "top-[-10%] -left-[10%] md:-left-[5%] w-[65vw] max-w-[800px] h-[350px] md:h-[520px]",
+      blob1: "w-full h-full -rotate-45 scale-110",
+      blob2: "inset-6 rotate-18 scale-90",
+    },
+    "top-right": {
+      container: "top-[-10%] -right-[10%] md:-right-[5%] w-[65vw] max-w-[800px] h-[350px] md:h-[520px]",
+      blob1: "w-full h-full rotate-45 scale-110",
+      blob2: "inset-6 -rotate-18 scale-90",
+    },
+    "bottom-left": {
+      container: "bottom-[-10%] -left-[10%] md:-left-[5%] w-[65vw] max-w-[750px] h-[300px] md:h-[460px]",
+      blob1: "w-full h-full rotate-24 scale-105",
+      blob2: "inset-8 -rotate-15 scale-90",
+    },
+    "bottom-right": {
+      container: "bottom-[-10%] -right-[10%] md:-right-[5%] w-[65vw] max-w-[750px] h-[300px] md:h-[460px]",
+      blob1: "w-full h-full -rotate-24 scale-105",
+      blob2: "inset-8 rotate-15 scale-90",
+    },
+    split: {
+      container: "top-[10%] left-0 right-0 w-full h-[380px] md:h-[550px]",
+      blob1: "-left-[15%] top-0 w-[55vw] max-w-[650px] h-full rotate-12",
+      blob2: "-right-[15%] bottom-0 w-[55vw] max-w-[650px] h-full -rotate-12",
+    },
+    random: {
+      container: "top-[5%] left-1/2 -translate-x-1/2 w-[80vw] max-w-[980px] h-[340px] md:h-[500px]",
+      blob1: "w-full h-full rotate-15 scale-105",
+      blob2: "inset-8 -rotate-8 scale-95",
+    },
+  }
+
+  const current = positionConfigs[position] || positionConfigs.center
 
   return (
     <div
       aria-hidden="true"
       className={cn(
-        "absolute pointer-events-none select-none blur-[100px] opacity-40 md:opacity-30 mix-blend-screen dark:mix-blend-lighten",
-        "w-[80vw] max-w-[900px] h-[300px] md:h-[500px]",
-        positionClass,
+        "absolute pointer-events-none select-none blur-[90px] md:blur-[120px] opacity-40 md:opacity-35 dark:opacity-40 mix-blend-normal dark:mix-blend-screen overflow-visible",
+        current.container,
         className
       )}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-cyan-400/30 to-purple-500/30 rounded-full transform -rotate-12" />
-      <div className="absolute inset-10 bg-gradient-to-tr from-indigo-500/20 to-teal-400/20 rounded-full mix-blend-overlay transform rotate-12" />
+      {/* Primary Organic Layer (Warm Orange Spectrum) */}
+      <div
+        className={cn(
+          "absolute rounded-[40%_60%_70%_30%/40%_50%_60%_55%] bg-gradient-to-r from-[#e15813]/40 via-[#ee7639]/35 to-[#f59e0b]/30",
+          animated && "animate-float-slow",
+          current.blob1
+        )}
+      />
+
+      {/* Secondary Complementary Layer (Deeper Amber / Rust Contrast) */}
+      <div
+        className={cn(
+          "absolute rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-[#c2410c]/30 via-[#e15813]/25 to-[#fb923c]/25 mix-blend-overlay dark:mix-blend-screen",
+          animated && "animate-float-alt",
+          current.blob2
+        )}
+      />
+
+      {/* Tertiary Accent Highlight (If present) */}
+      {current.blob3 && (
+        <div
+          className={cn(
+            "absolute rounded-full bg-gradient-to-b from-[#f97316]/25 via-[#fb923c]/20 to-transparent mix-blend-screen opacity-70",
+            current.blob3
+          )}
+        />
+      )}
     </div>
   )
 }

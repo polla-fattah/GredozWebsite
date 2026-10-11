@@ -15,7 +15,7 @@ export function AboutStats() {
     <section id="about" className="relative py-24 md:py-40 bg-foreground text-background overflow-hidden">
       {/* Blueprint Grid & Topological System Graph */}
       <TechGrid variant="dark" mask="faded" />
-      <AmbientGlow position="center" className="opacity-40" />
+      <AmbientGlow position="top-left" className="opacity-35 md:opacity-30" />
       <NodeTopologyGraph color="background" />
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">

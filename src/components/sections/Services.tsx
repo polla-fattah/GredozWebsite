@@ -22,7 +22,7 @@ export function Services() {
   return (
     <section id="services" className="relative py-24 md:py-40 bg-background overflow-hidden">
       <TechGrid mask="faded" />
-      <AmbientGlow position="center" className="opacity-40" />
+      <AmbientGlow position="top-right" className="opacity-45 md:opacity-40" />
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           variants={staggerContainer}

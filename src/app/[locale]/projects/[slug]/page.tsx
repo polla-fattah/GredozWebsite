@@ -18,19 +18,39 @@ export default function ProjectDetails() {
   const slug = params.slug as string
   const locale = params.locale as string
   
-  const isValidProject = ["financial-management", "ecommerce-dashboard"].includes(slug)
+  const VALID_PROJECTS = [
+    "financial-management",
+    "ecommerce-dashboard",
+    "enterprise-logistics",
+    "healthcare-platform",
+  ]
+  const isValidProject = VALID_PROJECTS.includes(slug)
   if (!isValidProject) {
     notFound()
   }
 
-  // Choose an image based on the project slug
-  const imageSrc = slug === "financial-management" 
-    ? "/images/isometric_financial_dashboard.jpg" 
-    : "/images/isometric_ecommerce_dashboard.jpg"
-    
-  const secondaryImageSrc = slug === "financial-management"
-    ? "/images/abstract_dark_fluid_1789384914818.jpg"
-    : "/images/abstract_data_screen_1789384998333.jpg"
+  // Choose images based on the project slug
+  const PROJECT_IMAGES: Record<string, { hero: string; secondary: string }> = {
+    "financial-management": {
+      hero: "/images/isometric_financial_dashboard.jpg",
+      secondary: "/images/abstract_dark_fluid_1789384914818.jpg",
+    },
+    "ecommerce-dashboard": {
+      hero: "/images/isometric_ecommerce_dashboard.jpg",
+      secondary: "/images/abstract_data_screen_1789384998333.jpg",
+    },
+    "enterprise-logistics": {
+      hero: "/images/isometric_mobile_app.jpg",
+      secondary: "/images/laptop_mockup_1789384939671.jpg",
+    },
+    "healthcare-platform": {
+      hero: "/images/isometric_ai_platform.jpg",
+      secondary: "/images/hacker_code_screen_1789384976720.jpg",
+    },
+  }
+
+  const imageSrc = PROJECT_IMAGES[slug]?.hero || "/images/isometric_financial_dashboard.jpg"
+  const secondaryImageSrc = PROJECT_IMAGES[slug]?.secondary || "/images/abstract_dark_fluid_1789384914818.jpg"
 
   const isRtl = locale === "ar" || locale === "ku"
   const ArrowIcon = isRtl ? ArrowRight : ArrowLeft

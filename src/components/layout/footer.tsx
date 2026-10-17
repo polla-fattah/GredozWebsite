@@ -45,8 +45,8 @@ export function Footer() {
               <h4 className="font-medium text-white text-sm mb-2">{tNav("projects")}</h4>
               <Link href="/projects/financial-management" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p1_title")}</Link>
               <Link href="/projects/ecommerce-dashboard" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p2_title")}</Link>
-              <Link href="/projects/financial-management" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p3_title")}</Link>
-              <Link href="/projects/ecommerce-dashboard" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p4_title")}</Link>
+              <Link href="/projects/enterprise-logistics" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p3_title")}</Link>
+              <Link href="/projects/healthcare-platform" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p4_title")}</Link>
             </div>
           </div>
 

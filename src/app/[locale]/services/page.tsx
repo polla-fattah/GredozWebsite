@@ -87,7 +87,7 @@ export default function ServicesPage() {
       ],
       outcomesTitle: t("s3.outcomesTitle"),
       outcome: t("s3.outcome"),
-      projectLink: "/projects",
+      projectLink: "/projects/enterprise-logistics",
       projectTitle: t("caseStudyP3"),
       icon: <Smartphone className="w-7 h-7 text-foreground stroke-[1.5]" />
     },
@@ -105,7 +105,7 @@ export default function ServicesPage() {
       ],
       outcomesTitle: t("s4.outcomesTitle"),
       outcome: t("s4.outcome"),
-      projectLink: "/projects/financial-management",
+      projectLink: "/projects/healthcare-platform",
       projectTitle: t("caseStudyP4"),
       icon: <Server className="w-7 h-7 text-foreground stroke-[1.5]" />
     },

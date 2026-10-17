@@ -238,6 +238,54 @@
         "AWS"
       ]
     },
+    "enterprise-logistics": {
+      "title": "Enterprise Logistics & Fleet Portal",
+      "badge": "MOBILE & CLOUD",
+      "date": "NOV 2026",
+      "client": "Atlas Global Freight",
+      "industry": "Logistics & Supply Chain",
+      "duration": "5 Months",
+      "challenge": "Dispatch operators struggled with fragmented legacy tracking tools, lack of live telemetry, and unpredictable delivery ETAs, leading to higher fuel overheads and delivery delays across over 500 regional freight vehicles.",
+      "solution": "We engineered a cross-platform mobile driver application paired with a centralized cloud dispatch control center. Features include real-time GPS telemetry, automated dynamic route calculation, and automated client shipment status alerts.",
+      "results": "Decreased fleet fuel consumption by 18%, lowered average delivery route delays by 35%, and provided full operational transparency to supply chain managers.",
+      "services": [
+        "Mobile App Development",
+        "Cloud Architecture",
+        "IoT & Telemetry Integration"
+      ],
+      "technologies": [
+        "React Native",
+        "TypeScript",
+        "Node.js",
+        "Redis",
+        "PostgreSQL",
+        "AWS"
+      ]
+    },
+    "healthcare-platform": {
+      "title": "Healthcare Telemedicine Platform",
+      "badge": "HEALTH TECH",
+      "date": "DEC 2026",
+      "client": "CuraHealth Network",
+      "industry": "Healthcare & MedTech",
+      "duration": "7 Months",
+      "challenge": "Patients faced long hospital waiting times for routine consultations, while practitioners needed a HIPAA-compliant virtual consultation tool connected seamlessly to electronic medical records without cumbersome installations.",
+      "solution": "We built an end-to-end telemedicine web and mobile ecosystem featuring encrypted WebRTC video visits, automated appointment scheduling, digital e-prescriptions, and secure FHIR-compliant electronic health record synchronization.",
+      "results": "Handled over 12,000 monthly virtual patient visits with a 99.98% platform uptime, reducing clinic in-person congestion by 45%.",
+      "services": [
+        "Product Engineering",
+        "HIPAA Compliance & Security",
+        "WebRTC Video Infrastructure"
+      ],
+      "technologies": [
+        "Next.js",
+        "WebRTC",
+        "Tailwind CSS",
+        "Go",
+        "PostgreSQL",
+        "Docker"
+      ]
+    },
     "labels": {
       "client": "Client",
       "industry": "Industry",

@@ -33,19 +33,20 @@ export default function TeamMemberDetailsPage() {
   const otherMembers = TEAM_MEMBERS_DATA.filter((m) => m.slug !== member.slug)
 
   return (
-    <div className="relative bg-background min-h-screen pb-32">
-      {/* Background Architectural Grid & Depth */}
-      <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
+    <div className="relative bg-background min-h-screen pb-20 md:pb-24">
+      {/* Background Architectural Grid & Depth (With smooth atmospheric blend to rest of page) */}
+      <div className="absolute inset-x-0 top-0 h-[85vh] max-h-[720px] overflow-hidden pointer-events-none select-none">
         <TechGrid mask="hero" />
         <AmbientGlow position="top" className="opacity-50 md:opacity-60" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-background/60 to-background" />
       </div>
 
-      <div className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 pt-28 md:pt-32 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="flex flex-col gap-10 md:gap-14"
+          className="flex flex-col gap-8 md:gap-10"
         >
           {/* Back Button */}
           <motion.div variants={fadeInUp}>

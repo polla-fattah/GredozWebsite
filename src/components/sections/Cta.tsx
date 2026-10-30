@@ -12,7 +12,7 @@ export function Cta() {
   const t = useTranslations("Cta")
 
   return (
-    <section className="py-24 md:py-32 bg-background border-t border-border/40 overflow-hidden">
+    <section className="py-14 md:py-20 bg-background border-t border-border/40 overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -21,18 +21,26 @@ export function Cta() {
           variants={fadeInUp}
           className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight max-w-2xl">
-            {t.rich("title", {
-              italic: (chunks) => <span>{chunks}</span>,
-              br: () => <br />
-            })}
-          </h2>
+          <div className="flex flex-col gap-4 max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
+              {t.rich("title", {
+                italic: (chunks) => <span className="text-foreground">{chunks}</span>
+              })}
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
+              {t("subtitle")}
+            </p>
+          </div>
           
-          <Link href="#footer"
-            className={cn(buttonVariants({ variant: "outline" }), "rounded-full px-8 text-sm h-12 tracking-widest font-semibold border-border/40 hover:bg-foreground hover:text-background transition-colors shrink-0 gap-2")}
+          <Link 
+            href="/contact"
+            className={cn(
+              buttonVariants({ size: "lg" }), 
+              "rounded-full px-8 text-sm h-12 w-full sm:w-auto tracking-wider font-semibold bg-foreground text-background hover:bg-foreground/90 transition-colors shrink-0 gap-2 justify-center"
+            )}
           >
-            {t("button")}
-            <ArrowRight className="w-4 h-4" />
+            <span>{t("button")}</span>
+            <ArrowRight className="w-4 h-4 rtl:rotate-180" />
           </Link>
         </motion.div>
       </div>

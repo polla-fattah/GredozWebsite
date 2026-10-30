@@ -88,7 +88,7 @@ export function EngagementModels() {
   ]
 
   return (
-    <section id="engagement" className="relative py-24 md:py-36 bg-foreground text-background overflow-hidden">
+    <section id="engagement" className="relative py-14 md:py-20 bg-foreground text-background overflow-hidden">
       <TechGrid variant="dark" mask="faded" />
       <AmbientGlow position="top-left" className="opacity-35 md:opacity-30" />
 
@@ -98,11 +98,11 @@ export function EngagementModels() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col gap-16 md:gap-24"
+          className="flex flex-col gap-8 md:gap-12"
         >
           {/* Section Header */}
           <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
               {t.rich("title", {
                 italic: (chunks) => <span>{chunks}</span>
               })}
@@ -156,19 +156,19 @@ export function EngagementModels() {
                   </div>
                 </div>
 
-                <div className="pt-8 mt-6 border-t border-background/10">
+                <div className="pt-6 mt-6 border-t border-background/10">
                   <Link
                     href="/contact"
                     className={cn(
-                      buttonVariants({ size: "lg" }),
-                      "w-full rounded-full text-xs sm:text-sm tracking-wider font-semibold justify-center transition-all",
+                      buttonVariants({ size: "default" }),
+                      "w-full rounded-full text-xs sm:text-sm font-semibold justify-center transition-all gap-2 px-4 py-3 h-auto sm:h-11 text-center whitespace-normal shrink-0",
                       model.highlight
                         ? "bg-background text-foreground hover:bg-background/90"
                         : "bg-background/10 text-background hover:bg-background hover:text-foreground"
                     )}
                   >
                     <span>{t("cta")}</span>
-                    <ArrowRight className="w-4 h-4 ml-2 rtl:rotate-180" />
+                    <ArrowRight className="w-4 h-4 rtl:rotate-180 shrink-0" />
                   </Link>
                 </div>
               </motion.div>

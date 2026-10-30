@@ -9,80 +9,83 @@
     "home": "Home"
   },
   "Footer": {
-    "useCases": "Use Cases",
+    "tagline": "Gredoz — IT solutions.",
+    "pagesTitle": "Pages",
+    "solutionsTitle": "Solutions",
+    "sectionsTitle": "Overview",
+    "home": "Home",
     "services": "Services",
-    "resources": "Resources",
-    "partners": "Partners",
     "about": "About",
     "team": "Team",
     "contact": "Contact",
-    "company": "Company",
-    "copyright": "© 2026 Gredoz. All rights reserved.",
-    "links": {
-      "productDevelopment": "Product Development",
-      "enterpriseSystems": "Enterprise Systems",
-      "saasDashboards": "SaaS Dashboards",
-      "webApplications": "Web Applications",
-      "aiResearchSolutions": "AI Research Solutions",
-      "softwareDevelopment": "Software Development",
-      "webDevelopment": "Web Development",
-      "appDevelopment": "App Development",
-      "uiuxDesign": "UI/UX Design",
-      "productStrategy": "Product Strategy",
-      "maintenance": "Maintenance",
-      "engineering": "Engineering",
-      "resources": "Resources",
-      "news": "News",
-      "documentation": "Documentation",
-      "guides": "Guides",
-      "leadership": "Leadership",
-      "terms": "Terms",
-      "careers": "Careers",
-      "investors": "Investors",
-      "termsAndConditions": "Terms & conditions",
-      "privacy": "Privacy",
-      "cookies": "Cookies"
-    }
+    "software": "Software solutions",
+    "hardware": "Hardware solutions",
+    "data": "Data solutions",
+    "howWeWork": "How we work",
+    "whyGredoz": "Why Gredoz",
+    "partnership": "Partnership models",
+    "faq": "FAQ",
+    "copyright": "© 2026 Gredoz. All rights reserved."
   },
   "Hero": {
-    "headline": "We Build Digital Products That Drive Growth.",
-    "subheadline": "From startups to global brands — we design, develop, and deliver high-performing web and mobile solutions that turn ideas into impact.",
-    "explore": "EXPLORE PROJECTS",
-    "contact": "LET'S TALK"
+    "headline": "We find the knot. Then we untie it.",
+    "subheadline": "Software, hardware and data solutions for businesses in Kurdistan and Iraq.",
+    "talkToUs": "Talk to us",
+    "seeServices": "See our services",
+    "explore": "See our services",
+    "contact": "Talk to us"
   },
   "Partners": {
     "trusted": "Trusted by innovative companies worldwide"
   },
   "About": {
-    "title": "A team of Builders and <italic>Innovators</italic>",
-    "description": "We combine creativity with engineering discipline to build products that users love. From early-stage startups to established enterprises, we help our clients transform complex problems into simple, elegant solutions.",
+    "title": "Every business has its knot. <italic>Here is how we untie it.</italic>",
+    "description": "Gredoz integrates custom software engineering, physical IT hardware setup, and data intelligence. We start from your actual operational bottlenecks, delivering dependable systems that your team can run on every single day.",
     "stats": {
-      "projects": "Projects Delivered",
-      "revenue": "Revenue Generated"
+      "projects": "Solutions Delivered",
+      "revenue": "Client Satisfaction"
     }
   },
   "Features": {
-    "title": "Why Partner With <italic>Us</italic>",
-    "f1_title": "Custom Solutions",
-    "f1_desc": "Tailor-made software designed to meet your unique business challenges and goals.",
-    "f2_title": "Dedicated Support",
-    "f2_desc": "Reliable assistance and maintenance to ensure your systems run smoothly.",
-    "f3_title": "Innovative Tech",
-    "f3_desc": "Cutting-edge technologies to drive efficiency and competitive advantage.",
+    "title": "Why <italic>Gredoz</italic>",
+    "f1_title": "One team, end to end.",
+    "f1_desc": "From the cable to the dashboard. We handle physical hardware supply and networking alongside custom software engineering and data analytics.",
+    "f2_title": "Built here.",
+    "f2_desc": "We know the local market, languages and payment realities.",
+    "f3_title": "Problem first.",
+    "f3_desc": "We start with your knot, not with a product to sell.",
     "f4_title": "Expert Team",
-    "f4_desc": "Seasoned professionals committed to delivering excellence in every project."
+    "f4_desc": "Seasoned professionals committed to delivering excellence in every project.",
+    "subtitle": "Three principles that define how we build and deliver.",
+    "f1_stage1": "Physical Layer",
+    "f1_stage1_desc": "Cabling, Wi-Fi 6, POS, Servers",
+    "f1_stage2": "Data & Security",
+    "f1_stage2_desc": "Zero-Trust, APIs, Warehousing",
+    "f1_stage3": "Dashboards & Apps",
+    "f1_stage3_desc": "Web Apps, Mobile, Actionable KPIs",
+    "f2_badge1": "Trilingual (Kurdish, Arabic, English)",
+    "f2_badge2": "Regional Payments (FIB, FastPay, ZainCash)",
+    "f2_badge3": "On-Site Support Across Kurdistan & Iraq",
+    "f3_step1_label": "The Knot",
+    "f3_step1_desc": "Identify the operational bottleneck",
+    "f3_step2_label": "The Solution",
+    "f3_step2_desc": "Custom software & hardware built to fit",
+    "f3_step3_label": "The Clarity",
+    "f3_step3_desc": "Clear numbers your team runs on every week"
   },
   "Services": {
-    "title": "Our <italic>Services</italic>",
-    "s1_title": "Web App Development",
-    "s1_desc": "Build blazing-fast web applications with clean architecture and scalable infrastructure.",
-    "s2_title": "Mobile App Development",
-    "s2_desc": "Create engaging mobile experiences natively for both iOS and Android platforms.",
-    "s3_title": "API & Backend Solutions",
-    "s3_desc": "Design robust and secure backend systems that power your digital products.",
+    "title": "What We <italic>Do</italic>",
+    "s1_title": "Software",
+    "s1_desc": "Web apps, mobile apps and business systems built around how you actually work.",
+    "s2_title": "Hardware",
+    "s2_desc": "Hardware supply, networks, servers and devices, installed and supported on site.",
+    "s3_title": "Data",
+    "s3_desc": "We mine your data and turn it into clear decisions.",
     "s4_title": "Maintenance & Growth",
     "s4_desc": "Continuous support and optimization to keep your applications running smoothly.",
-    "explore": "EXPLORE ALL SERVICES"
+    "explore": "EXPLORE ALL SERVICES",
+    "subtitle": "Three integrated disciplines built to solve complex business operations.",
+    "viewDetails": "Learn more"
   },
   "Projects": {
     "title": "Gredoz <italic>Projects</italic>",
@@ -189,8 +192,9 @@
     }
   },
   "Cta": {
-    "title": "Ready to build<br></br>your next <italic>big idea</italic>?",
-    "button": "CONTACT US"
+    "title": "Have a problem that <italic>won't untie?</italic>",
+    "subtitle": "Tell us about it. We'll reply within one working day.",
+    "button": "Talk to us"
   },
   "ProjectDetails": {
     "not_found": "Project not found.",
@@ -236,6 +240,54 @@
         "Tailwind CSS",
         "GraphQL",
         "AWS"
+      ]
+    },
+    "enterprise-logistics": {
+      "title": "Enterprise Logistics & Fleet Portal",
+      "badge": "MOBILE & CLOUD",
+      "date": "NOV 2026",
+      "client": "Atlas Global Freight",
+      "industry": "Logistics & Supply Chain",
+      "duration": "5 Months",
+      "challenge": "Dispatch operators struggled with fragmented legacy tracking tools, lack of live telemetry, and unpredictable delivery ETAs, leading to higher fuel overheads and delivery delays across over 500 regional freight vehicles.",
+      "solution": "We engineered a cross-platform mobile driver application paired with a centralized cloud dispatch control center. Features include real-time GPS telemetry, automated dynamic route calculation, and automated client shipment status alerts.",
+      "results": "Decreased fleet fuel consumption by 18%, lowered average delivery route delays by 35%, and provided full operational transparency to supply chain managers.",
+      "services": [
+        "Mobile App Development",
+        "Cloud Architecture",
+        "IoT & Telemetry Integration"
+      ],
+      "technologies": [
+        "React Native",
+        "TypeScript",
+        "Node.js",
+        "Redis",
+        "PostgreSQL",
+        "AWS"
+      ]
+    },
+    "healthcare-platform": {
+      "title": "Healthcare Telemedicine Platform",
+      "badge": "HEALTH TECH",
+      "date": "DEC 2026",
+      "client": "CuraHealth Network",
+      "industry": "Healthcare & MedTech",
+      "duration": "7 Months",
+      "challenge": "Patients faced long hospital waiting times for routine consultations, while practitioners needed a HIPAA-compliant virtual consultation tool connected seamlessly to electronic medical records without cumbersome installations.",
+      "solution": "We built an end-to-end telemedicine web and mobile ecosystem featuring encrypted WebRTC video visits, automated appointment scheduling, digital e-prescriptions, and secure FHIR-compliant electronic health record synchronization.",
+      "results": "Handled over 12,000 monthly virtual patient visits with a 99.98% platform uptime, reducing clinic in-person congestion by 45%.",
+      "services": [
+        "Product Engineering",
+        "HIPAA Compliance & Security",
+        "WebRTC Video Infrastructure"
+      ],
+      "technologies": [
+        "Next.js",
+        "WebRTC",
+        "Tailwind CSS",
+        "Go",
+        "PostgreSQL",
+        "Docker"
       ]
     },
     "labels": {
@@ -457,13 +509,13 @@
     }
   },
   "AboutPage": {
-    "badge": "ABOUT OUR COMPANY",
+    "badge": "ABOUT GREDOZ",
     "locationBadge": "BASED IN ERBIL, IRAQ",
-    "heroTitle": "Architecting high-performance <italic>software solutions</italic> from the heart of Kurdistan.",
-    "heroSubtitle": "We are an Erbil-based technology company crafting robust web applications, scalable cloud infrastructure, mobile products, and enterprise software that power modern businesses.",
+    "heroTitle": "The name is the <italic>promise.</italic>",
+    "heroSubtitle": "Gredoz (گرێدۆز) is Kurdish. \"Gre\" means a knot, a problem. \"Doz\" means the one who finds. We are the team that finds the knot in your business and unties it.",
     "exploreWork": "OUR SOLUTIONS",
-    "exploreServices": "OUR SERVICES",
-    "contactUs": "GET IN TOUCH",
+    "exploreServices": "See our services",
+    "contactUs": "Talk to us",
     "stats": {
       "projectsCount": "120+",
       "projectsLabel": "Solutions Delivered",
@@ -475,10 +527,9 @@
       "locationLabel": "Headquarters in Iraq"
     },
     "story": {
-      "badge": "OUR STORY",
-      "title": "Rooted in Erbil, Building for the <italic>Global Stage</italic>",
-      "p1": "Founded in Erbil, Iraq, Gredoz was established with a bold mission: to deliver world-class software engineering, thoughtful design, and trusted technical partnership to businesses across Iraq, the Kurdistan Region, and worldwide.",
-      "p2": "We believe modern software is the ultimate engine of business transformation. By marrying deep regional understanding with international engineering standards, we build digital infrastructure that scales effortlessly and drives tangible competitive advantage."
+      "title": "From Deep Engineering to <italic>Real-World Impact</italic>",
+      "p1": "Gredoz started from years of hands-on work in engineering, data warehousing and data mining. That path taught us one thing: technology only matters when it solves a real problem.",
+      "p2": "Today we are a small team of developers and data specialists building software, setting up hardware and turning data into business decisions."
     },
     "missionVision": {
       "missionTitle": "Our Mission",
@@ -500,182 +551,174 @@
       "s4_desc": "High-availability cloud architectures, secure REST and GraphQL APIs, automated CI/CD pipelines, and microservices powered by AWS and modern DevOps."
     },
     "values": {
-      "badge": "OUR PRINCIPLES",
-      "title": "Why Forward-Thinking Companies <italic>Choose Us</italic>",
-      "v1_title": "Engineering Rigor",
-      "v1_desc": "We enforce strict code reviews, automated testing, and scalable architecture design so your software remains robust for years to come.",
-      "v2_title": "Local Roots, Global Standards",
-      "v2_desc": "Based right here in Erbil, we offer direct on-the-ground communication and cultural alignment backed by international quality benchmarks.",
-      "v3_title": "Security & Uptime First",
-      "v3_desc": "Enterprise-grade data encryption, granular access control, and high-availability design to safeguard mission-critical systems.",
-      "v4_title": "Committed Partnership",
-      "v4_desc": "We aren't just contractors; we serve as your dedicated technology partners, offering proactive guidance, maintenance, and ongoing innovation."
+      "title": "What We <italic>Believe</italic>",
+      "subtitle": "Four principles that guide every system we build, every cable we lay, and every dataset we analyze.",
+      "v1_title": "Problems before products.",
+      "v1_desc": "We understand first, then build.",
+      "v2_title": "Simple beats clever.",
+      "v2_desc": "Systems your team can actually use.",
+      "v3_title": "Data should decide.",
+      "v3_desc": "Every solution leaves you with clearer numbers.",
+      "v4_title": "We stay.",
+      "v4_desc": "Support doesn't end at launch."
     },
     "hub": {
-      "title": "Erbil Software Engineering Hub",
+      "title": "Erbil Technology & Engineering Hub",
       "subtitle": "Kurdistan Region, Iraq · Global Architecture Standards",
-      "status": "Production · High Availability",
-      "h1_title": "On-Site & Regional",
-      "h1_desc": "Direct discovery, communication, and engineering alignment in Erbil.",
-      "h2_title": "Enterprise Security",
-      "h2_desc": "Zero-trust architecture, automated testing, and secure data storage.",
-      "h3_title": "Multilingual Teams",
-      "h3_desc": "Native technical collaboration in Kurdish, Arabic, and English."
+      "status": "Software · Hardware · Data",
+      "h1_title": "Software Solutions",
+      "h1_desc": "Custom web apps, mobile apps, and business systems designed around your workflow.",
+      "h2_title": "Hardware & Networks",
+      "h2_desc": "Servers, devices, Wi-Fi, and cabling delivered, installed, and maintained on site.",
+      "h3_title": "Data Intelligence",
+      "h3_desc": "Warehouses, data mining, and weekly dashboards your team can act on."
     },
     "location": {
       "badge": "OUR ERBIL HEADQUARTERS",
-      "title": "At the Center of Kurdistan's <italic>Tech Evolution</italic>",
-      "desc": "Operating from Erbil, Iraq, our multicultural and multilingual team (Kurdish, Arabic, English) bridges regional business realities with cutting-edge software paradigms. Whether you are in Erbil, Baghdad, or across the globe, we are here to collaborate.",
+      "title": "Built in Kurdistan, Engineered for <italic>Real Business</italic>",
+      "desc": "Operating from Erbil, Iraq, our multicultural and trilingual team (Kurdish, Arabic, English) bridges local operational realities with reliable software, hardware, and data solutions. Whether you are in Erbil, Baghdad, or across the region, we are ready to help.",
       "city": "Erbil, Kurdistan Region, Iraq",
       "timeZone": "GMT+3 Time Zone",
-      "languages": "Trilingual Engineering: Kurdish · Arabic · English",
-      "delivery": "Local In-Person & Global Remote Delivery",
+      "languages": "Trilingual: Kurdish · Arabic · English",
+      "delivery": "On-Site Installation & Regional Support",
       "locationLabel": "Location",
       "timezoneLabel": "Timezone",
-      "communicationLabel": "Communication",
-      "deliveryLabel": "Delivery Mode"
+      "communicationLabel": "Languages",
+      "deliveryLabel": "Delivery"
     },
     "cta": {
-      "title": "Ready to build your next software solution with our Erbil team?",
-      "subtitle": "Let's discuss your system requirements, technical roadmap, and how we can turn your vision into high-performance software.",
-      "button": "START A CONVERSATION"
+      "title": "Have a problem that won't untie?",
+      "subtitle": "Tell us about it. We'll reply within one working day.",
+      "button": "Talk to us"
     },
-    "learnMore": "Discover our full story & Erbil headquarters"
+    "learnMore": "Discover our full story & principles"
   },
   "ContactPage": {
     "badge": "GET IN TOUCH",
-    "title": "Let's build something <italic>exceptional</italic> together.",
-    "subtitle": "Have an upcoming software project, need dedicated engineering capacity, or want to modernize your systems? Reach out to our Erbil team.",
+    "title": "Tell us about your <italic>knot.</italic>",
+    "subtitle": "Software, hardware or data — describe the problem and we'll reply within one working day.",
     "form": {
-      "fullName": "Full Name",
-      "fullNamePlaceholder": "John Doe",
-      "email": "Work Email",
-      "emailPlaceholder": "john@company.com",
-      "phone": "Phone Number",
-      "phonePlaceholder": "+964 750 000 0000",
-      "company": "Company / Organization",
-      "companyPlaceholder": "Company Name (Optional)",
-      "service": "Service of Interest",
-      "serviceSelect": "Select a software solution...",
+      "fullName": "Name",
+      "fullNamePlaceholder": "Your full name",
+      "emailOrPhone": "Email or phone",
+      "emailOrPhonePlaceholder": "yourname@company.com or +964 750 000 0000",
+      "company": "Company",
+      "companyPlaceholder": "Company or organization name (Optional)",
+      "service": "Service needed",
       "services": {
-        "custom": "Custom Enterprise Software",
-        "web": "Web & Cloud Platforms",
-        "mobile": "Mobile App Development",
-        "cloud": "Cloud Architecture & DevOps",
-        "other": "General Software Consulting"
+        "software": "Software",
+        "hardware": "Hardware",
+        "data": "Data",
+        "not_sure": "Not sure yet"
       },
-      "budget": "Estimated Budget (USD)",
-      "budgets": {
-        "b1": "$5,000 - $15,000",
-        "b2": "$15,000 - $35,000",
-        "b3": "$35,000 - $75,000",
-        "b4": "$75,000+"
-      },
-      "message": "Project Details & Requirements",
-      "messagePlaceholder": "Tell us about your project, timeline, goals, and any specific technical requirements...",
-      "submit": "SEND MESSAGE",
-      "submitting": "SENDING...",
-      "successTitle": "Message Received!",
-      "successDesc": "Thank you for reaching out. Our engineering team in Erbil will review your inquiry and get back to you within 24 hours.",
+      "message": "Message",
+      "messagePlaceholder": "Describe the knot in your business, current tools, and what you want to achieve...",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successTitle": "Thanks.",
+      "successDesc": "We've got it and will reply within one working day.",
       "sendAnother": "Send another message"
     },
     "errors": {
-      "nameRequired": "Name must be at least 2 characters.",
-      "emailInvalid": "Please enter a valid email address.",
-      "serviceRequired": "Please select a service of interest.",
-      "messageMin": "Please provide at least 10 characters describing your project."
+      "nameRequired": "Please enter your name.",
+      "contactRequired": "Please enter your email or phone number.",
+      "serviceRequired": "Please select a service or choose 'Not sure yet'.",
+      "messageMin": "Please write at least 10 characters describing the problem."
     },
     "info": {
-      "badge": "ERBIL HEADQUARTERS",
-      "locationTitle": "Visit Our Office",
-      "locationAddress": "32 Park, Sarbasty, Erbil, Iraq",
-      "locationNote": "Please visit our office or contact us via phone or email.",
-      "emailTitle": "Direct Email",
+      "officeTitle": "Contact Details",
+      "responseTime": "Reply within 1 working day",
+      "locationTitle": "Location",
+      "locationAddress": "Erbil, Kurdistan Region, Iraq",
+      "locationNote": "On-site visits and consultations across Kurdistan and Iraq.",
+      "emailTitle": "Email",
       "emailAddress": "info@gredoz.krd",
-      "phoneTitle": "Phone",
-      "phoneNumber": "00964 (0)751 400 3545",
-      "phoneRaw": "+9647514003545",
+      "phoneTitle": "Phone / WhatsApp",
+      "phone1": "+964 787 440 1600",
+      "phone1Raw": "+9647874401600",
+      "phone2": "+964 750 770 0409",
+      "phone2Raw": "+9647507700409",
       "hoursTitle": "Working Hours",
-      "hoursValue": "Sun - Wed: 8:30 AM - 5:00 PM | Thu: 9:00 AM - 4:00 PM",
-      "scheduleTitle": "Opening Hours Schedule",
+      "hoursValue": "Sunday–Thursday, 9:00–17:00",
       "schedule": [
-        { "day": "Sunday", "hours": "8:30am - 5:00pm" },
-        { "day": "Monday", "hours": "8:30am - 5:00pm" },
-        { "day": "Tuesday", "hours": "8:30am - 5:00pm" },
-        { "day": "Wednesday", "hours": "8:30am - 5:00pm" },
-        { "day": "Thursday", "hours": "9:00am - 4:00pm" },
-        { "day": "Friday", "hours": "Closed" },
-        { "day": "Saturday", "hours": "Closed" }
+        {
+          "day": "Sunday–Thursday",
+          "hours": "9:00 – 17:00"
+        },
+        {
+          "day": "Friday–Saturday",
+          "hours": "Closed"
+        }
       ],
-      "guaranteeBadge": "Fast Turnaround",
-      "guaranteeDesc": "We review and respond to every request within 24 hours.",
-      "officeTitle": "Erbil Office & Direct Contact",
-      "responseTime": "24h Response Time"
+      "guaranteeBadge": "Fast Response",
+      "guaranteeDesc": "We review and reply within one working day.",
+      "callAction": "Call",
+      "whatsappAction": "WhatsApp",
+      "phoneSubtitle": "Direct call or instant WhatsApp chat"
     },
     "process": {
-      "badge": "WHAT HAPPENS NEXT",
-      "title": "Our Onboarding <italic>Process</italic>",
-      "step1_title": "1. Discovery & Needs Review",
-      "step1_desc": "We analyze your requirements, business goals, and technical feasibility.",
-      "step2_title": "2. Architecture & Proposal",
-      "step2_desc": "We deliver a detailed scope, tech stack recommendation, and timeline.",
-      "step3_title": "3. Kickoff & Execution",
-      "step3_desc": "Sprint setup, dedicated engineering team alignment, and milestone delivery."
+      "title": "How We Handle <italic>Your Request</italic>",
+      "step1_title": "Listen & Understand",
+      "step1_desc": "We review your note and determine the problem before suggesting anything.",
+      "step2_title": "Plan & Proposal",
+      "step2_desc": "We discuss a clear scope, timeline, hardware list or software architecture.",
+      "step3_title": "Build & Deliver",
+      "step3_desc": "Delivery in practical steps, with hardware setup and software deployment on site."
     }
   },
   "Process": {
-    "title": "Our Engineering <italic>Lifecycle</italic>",
-    "subtitle": "How we take complex software initiatives from initial discovery to high-availability production systems.",
+    "title": "How We <italic>Work</italic>",
+    "subtitle": "A clear, dependable 4-step delivery lifecycle for software, hardware, or combined deployments.",
     "step1_num": "01",
-    "step1_title": "Discovery & Architecture Blueprint",
-    "step1_desc": "Deep technical analysis, requirement mapping, microservices/monolith architecture specification, and database schema design.",
+    "step1_title": "Listen",
+    "step1_desc": "We learn the problem and what success looks like.",
     "step2_num": "02",
-    "step2_title": "Interactive UI/UX Prototyping",
-    "step2_desc": "Design system creation, wireframing, and interactive prototype validation before a single line of production code is written.",
+    "step2_title": "Plan",
+    "step2_desc": "A clear scope, timeline and price.",
     "step3_num": "03",
-    "step3_title": "Agile Sprints & Continuous CI/CD",
-    "step3_desc": "Two-week development sprints with automated testing, rigorous TypeScript code reviews, and continuous staging deployments.",
+    "step3_title": "Build",
+    "step3_desc": "Software, hardware or both, delivered in steps.",
     "step4_num": "04",
-    "step4_title": "Automated QA & Security Audits",
-    "step4_desc": "Comprehensive unit, integration, and load testing coupled with zero-trust security checks and vulnerability scans.",
+    "step4_title": "Support",
+    "step4_desc": "We stay after launch.",
     "step5_num": "05",
     "step5_title": "Cloud Production Launch & SLA",
     "step5_desc": "Seamless deployment to production on AWS/cloud infrastructure with 24/7 telemetry monitoring and proactive SLA support."
   },
   "Engagement": {
     "title": "Flexible <italic>Partnership Models</italic>",
-    "subtitle": "Structured collaboration models tailored for high-growth ventures, enterprise modernization, and dedicated technical teams.",
-    "m1_title": "Dedicated Engineering Squad",
+    "subtitle": "Structured collaboration models tailored for software development, hardware deployment, and ongoing technical support.",
+    "m1_title": "Dedicated Technical Squad",
     "m1_tag": "TEAM EXTENSION",
-    "m1_desc": "A dedicated, full-stack engineering team embedded directly into your tools and workflows to accelerate roadmap delivery.",
-    "m1_f1": "Dedicated senior full-stack developers & tech lead",
-    "m1_f2": "Direct integration with your Slack, Jira & GitHub",
-    "m1_f3": "Agile sprint cycles with daily async standups",
-    "m1_f4": "Flexible team scaling based on product phases",
-    "m2_title": "End-to-End Product Build",
-    "m2_tag": "TURNKEY SOLUTION",
-    "m2_desc": "Complete ownership of your digital product lifecycle from initial discovery and UI/UX design to production launch.",
-    "m2_f1": "Full product discovery, architecture & scoping",
-    "m2_f2": "Complete design system & UI/UX design",
-    "m2_f3": "Full-stack development with milestone deliverables",
-    "m2_f4": "Production deployment & post-launch warranty",
-    "m3_title": "Enterprise Modernization",
-    "m3_tag": "SYSTEM ARCHITECTURE",
-    "m3_desc": "Modernize legacy systems, re-architect for the cloud, and eliminate technical debt without disrupting daily business operations.",
-    "m3_f1": "Legacy monolith to modern cloud microservices",
-    "m3_f2": "Database migration & query optimization",
-    "m3_f3": "Zero-downtime cutover & data integrity checks",
-    "m3_f4": "Infrastructure cost reduction & performance tuning",
-    "cta": "DISCUSS YOUR PROJECT",
+    "m1_desc": "A dedicated engineering and data team embedded directly into your tools and operations to accelerate your roadmap.",
+    "m1_f1": "Dedicated senior software and data engineers",
+    "m1_f2": "Direct communication in Kurdish, Arabic & English",
+    "m1_f3": "Transparent sprints with weekly async updates",
+    "m1_f4": "Flexible scaling as your business expands",
+    "m2_title": "Turnkey Solution Delivery",
+    "m2_tag": "END-TO-END BUILD",
+    "m2_desc": "Complete delivery of your software platform or physical IT setup from initial discovery to on-site launch.",
+    "m2_f1": "Clear problem discovery, scope & fixed milestones",
+    "m2_f2": "Software development, hardware supply & cabling",
+    "m2_f3": "On-site testing, staff onboarding & training",
+    "m2_f4": "Complete handover with zero vendor lock-in",
+    "m3_title": "Infrastructure & Retainer",
+    "m3_tag": "SUPPORT & SLA",
+    "m3_desc": "Ongoing maintenance, monitoring, hardware repairs, and proactive on-site technical help when things break.",
+    "m3_f1": "Network & server monitoring with rapid response",
+    "m3_f2": "Routine hardware checkups and backup verification",
+    "m3_f3": "Software bugfixes, security patches & updates",
+    "m3_f4": "Dedicated on-site emergency support in Erbil",
+    "cta": "TALK TO US",
     "guarantees": {
-      "g1_title": "100% IP Ownership",
-      "g1_desc": "All code, architecture assets, and data schemas belong entirely to you.",
+      "g1_title": "100% Client Ownership",
+      "g1_desc": "All source code, devices, and data belong entirely to you.",
       "g2_title": "Zero-Trust Security",
-      "g2_desc": "Encrypted data in transit and at rest with strict access control.",
-      "g3_title": "99.98% Cloud SLA",
-      "g3_desc": "High availability architectures built for mission-critical uptime.",
+      "g2_desc": "Encrypted data, secure network setup, and strict access controls.",
+      "g3_title": "Hardware Warranty & SLA",
+      "g3_desc": "Official brand warranties and fast on-site response times.",
       "g4_title": "Enterprise NDA",
-      "g4_desc": "Mutual non-disclosure agreement signed prior to any discovery."
+      "g4_desc": "Mutual non-disclosure signed before exploring any business data."
     }
   },
   "Faq": {
@@ -695,109 +738,141 @@
     "a6": "Yes, we provide structured Service Level Agreements (SLAs) with defined response windows, 24/7 infrastructure telemetry monitoring, automated backups, continuous dependency updates, and dedicated engineering support packages."
   },
   "ServicesPage": {
-    "title": "Engineering custom <italic>software solutions</italic> built for scale and security.",
-    "subtitle": "From high-availability web platforms and mobile applications to enterprise cloud infrastructure and legacy modernization, we build mission-critical digital systems for forward-thinking companies.",
+    "title": "Every business has its own knot. <italic>Here is how we untie it.</italic>",
+    "subtitle": "Integrated software engineering, enterprise hardware supply and infrastructure, and actionable data solutions tailored to simplify your operations.",
     "startProject": "START A CONVERSATION",
     "exploreOfferings": "EXPLORE SERVICES",
     "startWith": "START WITH {num}",
-    "viewCaseStudy": "Case Study",
-    "caseStudyP1": "Financial Management System",
-    "caseStudyP2": "E-Commerce Dashboard",
-    "caseStudyP3": "Logistics & Fleet Portal",
-    "caseStudyP4": "Cloud Infrastructure",
-    "caseStudyP5": "Enterprise Modernization",
+    "discussSolution": "DISCUSS THIS SOLUTION",
     "metrics": {
-      "m1_val": "99.98%",
-      "m1_label": "Cloud SLA Uptime",
+      "m1_val": "100%",
+      "m1_label": "Hardware Warranty & Support",
       "m2_val": "Zero-Trust",
-      "m2_label": "Security Architecture",
+      "m2_label": "Security & Network Architecture",
       "m3_val": "Trilingual",
-      "m3_label": "Engineering Collaboration",
-      "m4_val": "100%",
-      "m4_label": "Client IP Ownership"
+      "m3_label": "Engineering & Support Team",
+      "m4_val": "End-to-End",
+      "m4_label": "Software & Hardware Delivery"
     },
-    "offeringsTitle": "Our Core <italic>Software Capabilities</italic>",
-    "offeringsSubtitle": "End-to-end technical execution across five specialized software disciplines.",
-    "s1": {
+    "offeringsTitle": "Our Core <italic>Solutions</italic>",
+    "offeringsSubtitle": "End-to-end execution across software engineering, physical IT hardware, and data intelligence.",
+    "software": {
       "num": "01",
-      "tag": "ENTERPRISE AUTOMATION",
-      "title": "Custom Enterprise Software & ERP Systems",
-      "desc": "Tailor-made enterprise software, CRM systems, inventory management, and automated workflow pipelines engineered to streamline complex business operations and eliminate manual bottlenecks.",
-      "deliverablesTitle": "Core Deliverables & Capabilities",
-      "d1": "Custom ERP, CRM, and internal operations portals",
-      "d2": "Automated workflow engines & transaction processing",
-      "d3": "Granular role-based access control (RBAC) & audit logs",
-      "d4": "Multi-tenant database architectures & reporting",
-      "outcomesTitle": "Business Impact",
-      "outcome": "Eliminates operational redundancy, accelerates business reporting by 40%, and scales seamlessly with organizational growth."
+      "tag": "SOFTWARE SOLUTIONS",
+      "title": "Software solutions",
+      "desc": "Custom web, mobile, and business systems engineered to streamline your operations and connect seamlessly.",
+      "items": [
+        {
+          "title": "Web applications",
+          "desc": "Booking systems, marketplaces, portals and dashboards."
+        },
+        {
+          "title": "Mobile apps",
+          "desc": "Android and iOS apps for your customers and your staff."
+        },
+        {
+          "title": "Business systems",
+          "desc": "Custom systems built to fit your workflow."
+        },
+        {
+          "title": "Integrations",
+          "desc": "Connect your tools, payment providers and existing systems."
+        }
+      ]
+    },
+    "hardware": {
+      "num": "02",
+      "tag": "HARDWARE SOLUTIONS",
+      "title": "Hardware solutions",
+      "desc": "Procurement, deployment, networking, and ongoing maintenance for your complete physical IT ecosystem.",
+      "items": [
+        {
+          "title": "Hardware supply",
+          "desc": "Computers, laptops, servers, printers, networking gear, POS terminals and cameras, sourced from trusted brands with warranty, delivered and installed."
+        },
+        {
+          "title": "Networks",
+          "desc": "Office and site networking, Wi-Fi, cabling and security."
+        },
+        {
+          "title": "Servers & cloud",
+          "desc": "On-premise servers, backups and cloud migration."
+        },
+        {
+          "title": "Devices & setup",
+          "desc": "Setup and configuration of computers, POS terminals, cameras and IoT devices."
+        },
+        {
+          "title": "Support & maintenance",
+          "desc": "Monitoring, repairs and on-site help when things break."
+        }
+      ]
+    },
+    "data": {
+      "num": "03",
+      "tag": "DATA SOLUTIONS",
+      "title": "Data solutions",
+      "desc": "Turn scattered operational numbers into reliable data warehouses, predictive patterns, and clear weekly executive reporting.",
+      "items": [
+        {
+          "title": "Data warehousing",
+          "desc": "Bring scattered data into one reliable place."
+        },
+        {
+          "title": "Data mining & analytics",
+          "desc": "Find the patterns behind sales, costs and customers."
+        },
+        {
+          "title": "Reports & dashboards",
+          "desc": "Clear numbers your team can act on every week."
+        }
+      ]
+    },
+    "howWeWork": {
+      "title": "How We <italic>Work</italic>",
+      "titlePlain": "How We Work",
+      "subtitle": "A clear, dependable 4-step delivery lifecycle for software, hardware, or combined deployments.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Listen",
+          "desc": "We learn the problem and what success looks like."
+        },
+        {
+          "num": "02",
+          "title": "Plan",
+          "desc": "A clear scope, timeline and price."
+        },
+        {
+          "num": "03",
+          "title": "Build",
+          "desc": "Software, hardware or both, delivered in steps."
+        },
+        {
+          "num": "04",
+          "title": "Support",
+          "desc": "We stay after launch."
+        }
+      ]
+    },
+    "s1": {
+      "title": "Software solutions"
     },
     "s2": {
-      "num": "02",
-      "tag": "CLOUD PLATFORMS",
-      "title": "High-Performance Web Applications",
-      "desc": "Blazing-fast, cloud-native web applications engineered with Next.js, React, TypeScript, and modern micro-frontends designed for high concurrency, real-time data streaming, and sub-second load times.",
-      "deliverablesTitle": "Core Deliverables & Capabilities",
-      "d1": "Scalable SaaS platforms & interactive dashboards",
-      "d2": "Server-side rendering (SSR) & edge caching for maximum speed",
-      "d3": "Real-time WebSockets & data visualization components",
-      "d4": "High-security authentication (OAuth, MFA, SSO)",
-      "outcomesTitle": "Business Impact",
-      "outcome": "Delivers sub-second response times, superior search engine performance, and effortless conversion flows."
+      "title": "Hardware solutions"
     },
     "s3": {
-      "num": "03",
-      "tag": "MOBILE ENGINEERING",
-      "title": "Native & Cross-Platform Mobile Apps",
-      "desc": "Fluid, high-performance mobile applications engineered for iOS and Android delivering 60fps animations, intuitive gestures, offline-first data sync, and enterprise-grade mobile security.",
-      "deliverablesTitle": "Core Deliverables & Capabilities",
-      "d1": "Native iOS (Swift) & Android (Kotlin) development",
-      "d2": "High-efficiency cross-platform apps via React Native",
-      "d3": "Offline-first architectures with automatic background sync",
-      "d4": "Biometric authentication & push notification pipelines",
-      "outcomesTitle": "Business Impact",
-      "outcome": "Drives high user retention, 4.8+ app store ratings, and seamless cross-platform consistency."
+      "title": "Data solutions"
     },
     "s4": {
-      "num": "04",
-      "tag": "DEVOPS & CLOUD",
-      "title": "Cloud Infrastructure, DevOps & Microservices",
-      "desc": "Resilient cloud backends, microservices architectures, containerized deployments, and automated CI/CD pipelines deployed on AWS and modern cloud platforms for mission-critical reliability.",
-      "deliverablesTitle": "Core Deliverables & Capabilities",
-      "d1": "Docker containerization & Kubernetes cluster orchestration",
-      "d2": "High-throughput REST and GraphQL API gateways",
-      "d3": "Automated GitHub Actions CI/CD deployment pipelines",
-      "d4": "Cloud cost optimization, auto-scaling, and telemetry",
-      "outcomesTitle": "Business Impact",
-      "outcome": "Guarantees 99.98% system availability, zero-downtime rolling updates, and up to 35% reduction in cloud infrastructure expenses."
+      "title": "How We Work"
     },
     "s5": {
-      "num": "05",
-      "tag": "SYSTEM ARCHITECTURE",
-      "title": "Legacy Modernization & Technical Debt Remediation",
-      "desc": "Transforming brittle legacy on-premise systems and outdated codebases into modern cloud-native architectures without interrupting daily operations or risking data integrity.",
-      "deliverablesTitle": "Core Deliverables & Capabilities",
-      "d1": "Phased monolith-to-microservices code refactoring",
-      "d2": "Database normalization, indexing, and cloud migration",
-      "d3": "Zero-downtime cutover strategy & data validation audits",
-      "d4": "Elimination of legacy security vulnerabilities",
-      "outcomesTitle": "Business Impact",
-      "outcome": "Reduces maintenance overhead by over 50%, eliminates security liabilities, and unlocks high-velocity feature deployment."
-    },
-    "standards": {
-      "title": "Our Engineering <italic>Standards</italic>",
-      "subtitle": "How we guarantee world-class software quality across every line of code we ship.",
-      "c1_title": "Strict Type Safety & Code Reviews",
-      "c1_desc": "Every pull request undergoes peer reviews and strict TypeScript typing to eliminate runtime bugs before staging.",
-      "c2_title": "Automated Testing Suites",
-      "c2_desc": "Unit, integration, and end-to-end regression tests run automatically on every commit via CI/CD pipelines.",
-      "c3_title": "Zero-Trust Security & Encryption",
-      "c3_desc": "Enterprise data encryption at rest and in transit, strict RBAC, and automated vulnerability scanning.",
-      "c4_title": "Complete Code & Architecture Transfer",
-      "c4_desc": "Comprehensive documentation, clean Git repositories, and 100% intellectual property ownership transferred to you."
+      "title": "Support & Maintenance"
     },
     "cta": {
-      "title": "Ready to discuss your software project with our Erbil team?",
-      "subtitle": "Schedule an architectural discovery session to explore technical requirements, timelines, and execution strategies.",
+      "title": "Ready to untie your business knot?",
+      "subtitle": "Schedule a discovery session to explore technical requirements, hardware procurement, timelines, and execution strategies.",
       "button": "START A CONVERSATION"
     }
   },
@@ -824,31 +899,31 @@
     "c3_desc": "Integrating deep learning workflows into scalable cloud architectures without unnecessary complexity."
   },
   "Metadata": {
-    "defaultTitle": "Gredoz Software Solutions",
-    "defaultDescription": "We build digital products that drive growth. From startups to global brands, we design, develop, and deliver high-performing web and mobile solutions.",
+    "defaultTitle": "Gredoz | Software, Hardware & Data Solutions",
+    "defaultDescription": "Custom software engineering, IT hardware procurement & networking, and actionable data analytics for businesses in Kurdistan and Iraq.",
     "Home": {
-      "title": "Home",
-      "description": "Welcome to Gredoz Software Solutions. We build digital products that drive growth. Custom software, web apps, and mobile solutions."
+      "title": "Gredoz | Software, Hardware & Data Solutions",
+      "description": "We find the knot. Then we untie it. Software, hardware and data solutions for businesses in Kurdistan and Iraq."
     },
     "About": {
-      "title": "About Us",
-      "description": "Learn about Gredoz. A team of builders and innovators combining creativity with engineering discipline to build products that users love."
+      "title": "About Us | The Name is the Promise | Gredoz",
+      "description": "Gredoz (گرێدۆز): The team that finds the knot in your business and unties it. Software, hardware, and data solutions for businesses in Kurdistan and Iraq."
     },
     "Services": {
-      "title": "Our Services",
-      "description": "Explore our services: Web App Development, Mobile App Development, API & Backend Solutions, Maintenance & Growth."
+      "title": "Services | Software, Hardware & Data Solutions | Gredoz",
+      "description": "Explore our full spectrum of services: custom web and mobile software, enterprise hardware supply, office networks, cloud servers, and data analytics in Erbil, Kurdistan."
     },
     "Projects": {
       "title": "Projects",
       "description": "A showcase of high-impact web applications, enterprise systems, and scalable digital products engineered for modern businesses."
     },
     "Team": {
-      "title": "Our Team",
-      "description": "Meet the multidisciplinary software engineering, architecture, and leadership team at Gredoz Software Solutions in Erbil, Kurdistan."
+      "title": "Our Team | Technology Experts & Builders | Gredoz",
+      "description": "Meet the multidisciplinary software engineering, hardware networking, AI, and leadership team at Gredoz in Erbil, Kurdistan."
     },
     "Contact": {
-      "title": "Contact Us",
-      "description": "Get in touch with Gredoz Software Solutions. We are ready to help you transform complex problems into simple, elegant solutions."
+      "title": "Contact Us | Tell Us About Your Knot | Gredoz",
+      "description": "Software, hardware or data — describe your business problem and our team in Erbil will reply within one working day."
     }
   }
 }

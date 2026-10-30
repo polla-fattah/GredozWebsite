@@ -1,33 +1,27 @@
 "use client"
 
-import { useTranslations } from "next-intl"
+import { useTranslations, useMessages } from "next-intl"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer } from "@/lib/animations"
 import { Link } from "@/i18n/routing"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { TechGrid, AmbientGlow } from "@/components/ui/background-patterns"
 import { 
-  TechGrid, 
-  AmbientGlow,
-  GridLines
-} from "@/components/ui/background-patterns"
-import { 
-  Cpu, 
-  Globe, 
-  Smartphone, 
+  Code2, 
   Server, 
-  RefreshCw, 
-  ShieldCheck, 
-  Check, 
-  ArrowRight,
-  Code2,
-  FileText,
-  Lock,
-  Layers
+  Database, 
+  ArrowRight, 
+  Headphones, 
+  Calendar, 
+  Cpu, 
+  ShieldCheck,
+  CheckCircle2
 } from "lucide-react"
 
 export default function ServicesPage() {
   const t = useTranslations("ServicesPage")
+  const messages = useMessages() as any
 
   const metrics = [
     { value: t("metrics.m1_val"), label: t("metrics.m1_label") },
@@ -36,149 +30,53 @@ export default function ServicesPage() {
     { value: t("metrics.m4_val"), label: t("metrics.m4_label") },
   ]
 
-  const offerings = [
-    {
-      num: t("s1.num"),
-      tag: t("s1.tag"),
-      title: t("s1.title"),
-      desc: t("s1.desc"),
-      deliverablesTitle: t("s1.deliverablesTitle"),
-      deliverables: [
-        t("s1.d1"),
-        t("s1.d2"),
-        t("s1.d3"),
-        t("s1.d4"),
-      ],
-      outcomesTitle: t("s1.outcomesTitle"),
-      outcome: t("s1.outcome"),
-      projectLink: "/projects/financial-management",
-      projectTitle: t("caseStudyP1"),
-      icon: <Cpu className="w-7 h-7 text-foreground stroke-[1.5]" />
-    },
-    {
-      num: t("s2.num"),
-      tag: t("s2.tag"),
-      title: t("s2.title"),
-      desc: t("s2.desc"),
-      deliverablesTitle: t("s2.deliverablesTitle"),
-      deliverables: [
-        t("s2.d1"),
-        t("s2.d2"),
-        t("s2.d3"),
-        t("s2.d4"),
-      ],
-      outcomesTitle: t("s2.outcomesTitle"),
-      outcome: t("s2.outcome"),
-      projectLink: "/projects/ecommerce-dashboard",
-      projectTitle: t("caseStudyP2"),
-      icon: <Globe className="w-7 h-7 text-foreground stroke-[1.5]" />
-    },
-    {
-      num: t("s3.num"),
-      tag: t("s3.tag"),
-      title: t("s3.title"),
-      desc: t("s3.desc"),
-      deliverablesTitle: t("s3.deliverablesTitle"),
-      deliverables: [
-        t("s3.d1"),
-        t("s3.d2"),
-        t("s3.d3"),
-        t("s3.d4"),
-      ],
-      outcomesTitle: t("s3.outcomesTitle"),
-      outcome: t("s3.outcome"),
-      projectLink: "/projects",
-      projectTitle: t("caseStudyP3"),
-      icon: <Smartphone className="w-7 h-7 text-foreground stroke-[1.5]" />
-    },
-    {
-      num: t("s4.num"),
-      tag: t("s4.tag"),
-      title: t("s4.title"),
-      desc: t("s4.desc"),
-      deliverablesTitle: t("s4.deliverablesTitle"),
-      deliverables: [
-        t("s4.d1"),
-        t("s4.d2"),
-        t("s4.d3"),
-        t("s4.d4"),
-      ],
-      outcomesTitle: t("s4.outcomesTitle"),
-      outcome: t("s4.outcome"),
-      projectLink: "/projects/financial-management",
-      projectTitle: t("caseStudyP4"),
-      icon: <Server className="w-7 h-7 text-foreground stroke-[1.5]" />
-    },
-    {
-      num: t("s5.num"),
-      tag: t("s5.tag"),
-      title: t("s5.title"),
-      desc: t("s5.desc"),
-      deliverablesTitle: t("s5.deliverablesTitle"),
-      deliverables: [
-        t("s5.d1"),
-        t("s5.d2"),
-        t("s5.d3"),
-        t("s5.d4"),
-      ],
-      outcomesTitle: t("s5.outcomesTitle"),
-      outcome: t("s5.outcome"),
-      projectLink: "/projects",
-      projectTitle: t("caseStudyP5"),
-      icon: <RefreshCw className="w-7 h-7 text-foreground stroke-[1.5]" />
-    },
-  ]
+  const softwareItems: Array<{ title: string; desc: string }> = 
+    messages?.ServicesPage?.software?.items || []
 
-  const standards = [
-    {
-      icon: <Code2 className="w-6 h-6 text-foreground stroke-[1.5]" />,
-      title: t("standards.c1_title"),
-      desc: t("standards.c1_desc")
-    },
-    {
-      icon: <Layers className="w-6 h-6 text-foreground stroke-[1.5]" />,
-      title: t("standards.c2_title"),
-      desc: t("standards.c2_desc")
-    },
-    {
-      icon: <Lock className="w-6 h-6 text-foreground stroke-[1.5]" />,
-      title: t("standards.c3_title"),
-      desc: t("standards.c3_desc")
-    },
-    {
-      icon: <FileText className="w-6 h-6 text-foreground stroke-[1.5]" />,
-      title: t("standards.c4_title"),
-      desc: t("standards.c4_desc")
-    },
+  const hardwareItems: Array<{ title: string; desc: string }> = 
+    messages?.ServicesPage?.hardware?.items || []
+
+  const dataItems: Array<{ title: string; desc: string }> = 
+    messages?.ServicesPage?.data?.items || []
+
+  const howWeWorkSteps: Array<{ num: string; title: string; desc: string }> = 
+    messages?.ServicesPage?.howWeWork?.steps || []
+
+  const stepIcons = [
+    <Headphones key="1" className="w-5 h-5 text-foreground stroke-[1.5]" />,
+    <Calendar key="2" className="w-5 h-5 text-foreground stroke-[1.5]" />,
+    <Cpu key="3" className="w-5 h-5 text-foreground stroke-[1.5]" />,
+    <ShieldCheck key="4" className="w-5 h-5 text-foreground stroke-[1.5]" />
   ]
 
   return (
-    <div className="relative bg-background min-h-screen pb-24">
-      {/* Background Architectural Grid & Depth (Constrained to top screen area) */}
-      <div className="absolute inset-x-0 top-0 h-[100vh] overflow-hidden pointer-events-none select-none">
+    <div className="relative bg-background min-h-screen">
+      {/* Background Architectural Grid & Depth (Constrained to top screen area with smooth blend to rest of page) */}
+      <div className="absolute inset-x-0 top-0 h-[85vh] max-h-[720px] overflow-hidden pointer-events-none select-none">
         <TechGrid mask="hero" />
         <AmbientGlow position="top-left" className="opacity-50 md:opacity-60" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-background/60 to-background" />
       </div>
 
-      {/* Hero Section */}
-      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
+      {/* 1. Hero & Metrics Section */}
+      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-32 pb-10 md:pb-14 relative z-10">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="flex flex-col gap-8 md:gap-12"
+          className="flex flex-col gap-6 md:gap-8"
         >
-          {/* Main Headline (Clean typography, no badges, no italics) */}
+          {/* Main Headline */}
           <motion.div variants={fadeInUp} className="max-w-5xl">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-medium tracking-tight leading-[1.3] py-2">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-medium tracking-tight leading-[1.25] py-2">
               {t.rich("title", {
-                italic: (chunks) => <span>{chunks}</span>
+                italic: (chunks) => <span className="text-foreground">{chunks}</span>
               })}
             </h1>
           </motion.div>
 
-          {/* Subtitle & Action Buttons */}
-          <motion.div variants={fadeInUp} className="grid md:grid-cols-12 gap-8 items-end pt-2">
+          {/* Subtitle & Action Button */}
+          <motion.div variants={fadeInUp} className="grid md:grid-cols-12 gap-6 md:gap-8 items-end">
             <p className="md:col-span-8 text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed font-light">
               {t("subtitle")}
             </p>
@@ -187,16 +85,17 @@ export default function ServicesPage() {
                 href="/contact"
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "rounded-full px-8 text-sm h-12 tracking-wider font-semibold bg-foreground text-background hover:bg-foreground/90 transition-all justify-center"
+                  "rounded-full px-8 text-sm h-12 w-full sm:w-auto tracking-wider font-semibold bg-foreground text-background hover:bg-foreground/90 transition-all justify-center gap-2"
                 )}
               >
-                {t("startProject")}
+                <span>{t("startProject")}</span>
+                <ArrowRight className="w-4 h-4 rtl:rotate-180" />
               </Link>
             </div>
           </motion.div>
 
           {/* Architectural Metrics Strip */}
-          <motion.div variants={fadeInUp} className="pt-8">
+          <motion.div variants={fadeInUp} className="pt-4 md:pt-6">
             <div className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 md:p-10 shadow-sm relative overflow-hidden group">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {metrics.map((metric, i) => (
@@ -215,197 +114,325 @@ export default function ServicesPage() {
         </motion.div>
       </section>
 
-      {/* Core Offerings Deep-Dive Section */}
-      <section id="offerings" className="relative overflow-hidden pt-28 md:pt-40 scroll-mt-24 z-10">
+      {/* 2. Core Solutions Offerings Section */}
+      <section id="offerings" className="relative overflow-hidden py-12 md:py-16 border-t border-border/40 scroll-mt-24 z-10">
         <div className="container max-w-7xl mx-auto px-4 relative z-10">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col gap-16 md:gap-24"
-        >
-          {/* Section Header */}
-          <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
-              {t.rich("offeringsTitle", {
-                italic: (chunks) => <span>{chunks}</span>
-              })}
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
-              {t("offeringsSubtitle")}
-            </p>
-          </motion.div>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="flex flex-col gap-8 md:gap-12"
+          >
+            {/* Section Header */}
+            <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
+                {t.rich("offeringsTitle", {
+                  italic: (chunks) => <span className="text-foreground">{chunks}</span>
+                })}
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
+                {t("offeringsSubtitle")}
+              </p>
+            </motion.div>
 
-          {/* Offerings Stack */}
-          <div className="flex flex-col gap-10 md:gap-14">
-            {offerings.map((offering, index) => (
+            {/* Solutions Stack */}
+            <div className="flex flex-col gap-8 md:gap-10">
+              
+              {/* Pillar 01: Software Solutions */}
               <motion.div
-                key={index}
-                id={`service-${index + 1}`}
+                id="software"
                 variants={fadeInUp}
-                className="rounded-3xl border border-border/60 bg-card p-8 sm:p-10 md:p-14 relative overflow-hidden group shadow-sm transition-colors hover:border-foreground/30 scroll-mt-24"
+                className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 md:p-12 relative overflow-hidden group shadow-sm transition-colors hover:border-foreground/30 scroll-mt-24"
               >
-
-                <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-                  {/* Left Column: Header, Description & Outcomes */}
-                  <div className="lg:col-span-6 flex flex-col gap-6">
-                    <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-6 md:gap-8">
+                  {/* Top Bar */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-border/40">
+                    <div className="flex items-center gap-4">
                       <div className="p-3.5 rounded-2xl bg-muted border border-border/40">
-                        {offering.icon}
+                        <Code2 className="w-7 h-7 text-foreground stroke-[1.5]" />
                       </div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs font-mono font-medium text-muted-foreground tracking-wider">
-                          {offering.tag}
+                      <div className="flex flex-col">
+                        <span className="text-xs font-mono font-medium text-muted-foreground tracking-wider uppercase">
+                          {t("software.tag")}
                         </span>
-                        <span className="text-xs font-mono font-bold text-foreground">
-                          {offering.num}
-                        </span>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-foreground">
+                          {t("software.title")}
+                        </h3>
                       </div>
                     </div>
+                    <span className="text-xs font-mono font-bold text-foreground bg-muted px-4 py-2 rounded-full w-fit">
+                      {t("software.num")}
+                    </span>
+                  </div>
 
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-foreground leading-tight">
-                      {offering.title}
-                    </h3>
+                  {/* Description */}
+                  <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl">
+                    {t("software.desc")}
+                  </p>
 
-                    <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed">
-                      {offering.desc}
-                    </p>
+                  {/* Items Grid */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {softwareItems.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="rounded-2xl bg-muted/30 border border-border/40 p-5 sm:p-6 flex flex-col gap-2 hover:bg-muted/50 hover:border-foreground/20 transition-all"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-foreground shrink-0" />
+                          <h4 className="text-base font-semibold text-foreground tracking-tight">
+                            {item.title}
+                          </h4>
+                        </div>
+                        <p className="text-sm text-muted-foreground font-light leading-relaxed pl-6 rtl:pl-0 rtl:pr-6">
+                          {item.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
 
-                    {/* Business Outcome Callout */}
-                    <div className="p-5 rounded-2xl bg-muted/40 border border-border/40 flex flex-col gap-1.5 mt-2">
-                      <span className="text-xs uppercase font-semibold text-foreground tracking-wider">
-                        {offering.outcomesTitle}
-                      </span>
-                      <p className="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
-                        {offering.outcome}
+                  {/* Action */}
+                  <div className="pt-6 border-t border-border/40 flex items-center justify-between">
+                    <Link
+                      href="/contact?service=software"
+                      className={cn(
+                        buttonVariants({ size: "default", variant: "outline" }),
+                        "rounded-full px-6 text-xs tracking-wider font-semibold border-border/60 hover:bg-foreground hover:text-background dark:hover:bg-foreground dark:hover:text-background transition-colors gap-2"
+                      )}
+                    >
+                      <span>{t("discussSolution")}</span>
+                      <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Pillar 02: Hardware Solutions */}
+              <motion.div
+                id="hardware"
+                variants={fadeInUp}
+                className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 md:p-12 relative overflow-hidden group shadow-sm transition-colors hover:border-foreground/30 scroll-mt-24"
+              >
+                <div className="flex flex-col gap-6 md:gap-8">
+                  {/* Top Bar */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-border/40">
+                    <div className="flex items-center gap-4">
+                      <div className="p-3.5 rounded-2xl bg-muted border border-border/40">
+                        <Server className="w-7 h-7 text-foreground stroke-[1.5]" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-xs font-mono font-medium text-muted-foreground tracking-wider uppercase">
+                          {t("hardware.tag")}
+                        </span>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-foreground">
+                          {t("hardware.title")}
+                        </h3>
+                      </div>
+                    </div>
+                    <span className="text-xs font-mono font-bold text-foreground bg-muted px-4 py-2 rounded-full w-fit">
+                      {t("hardware.num")}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl">
+                    {t("hardware.desc")}
+                  </p>
+
+                  {/* Items Grid */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {hardwareItems.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className={cn(
+                          "rounded-2xl bg-muted/30 border border-border/40 p-5 sm:p-6 flex flex-col gap-2 hover:bg-muted/50 hover:border-foreground/20 transition-all",
+                          idx === 0 && "sm:col-span-2 lg:col-span-2"
+                        )}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-foreground shrink-0" />
+                          <h4 className="text-base font-semibold text-foreground tracking-tight">
+                            {item.title}
+                          </h4>
+                        </div>
+                        <p className="text-sm text-muted-foreground font-light leading-relaxed pl-6 rtl:pl-0 rtl:pr-6">
+                          {item.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Action */}
+                  <div className="pt-6 border-t border-border/40 flex items-center justify-between">
+                    <Link
+                      href="/contact?service=hardware"
+                      className={cn(
+                        buttonVariants({ size: "default", variant: "outline" }),
+                        "rounded-full px-6 text-xs tracking-wider font-semibold border-border/60 hover:bg-foreground hover:text-background dark:hover:bg-foreground dark:hover:text-background transition-colors gap-2"
+                      )}
+                    >
+                      <span>{t("discussSolution")}</span>
+                      <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Pillar 03: Data Solutions */}
+              <motion.div
+                id="data"
+                variants={fadeInUp}
+                className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 md:p-12 relative overflow-hidden group shadow-sm transition-colors hover:border-foreground/30 scroll-mt-24"
+              >
+                <div className="flex flex-col gap-6 md:gap-8">
+                  {/* Top Bar */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-border/40">
+                    <div className="flex items-center gap-4">
+                      <div className="p-3.5 rounded-2xl bg-muted border border-border/40">
+                        <Database className="w-7 h-7 text-foreground stroke-[1.5]" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-xs font-mono font-medium text-muted-foreground tracking-wider uppercase">
+                          {t("data.tag")}
+                        </span>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-foreground">
+                          {t("data.title")}
+                        </h3>
+                      </div>
+                    </div>
+                    <span className="text-xs font-mono font-bold text-foreground bg-muted px-4 py-2 rounded-full w-fit">
+                      {t("data.num")}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl">
+                    {t("data.desc")}
+                  </p>
+
+                  {/* Items Grid */}
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    {dataItems.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="rounded-2xl bg-muted/30 border border-border/40 p-5 sm:p-6 flex flex-col gap-2 hover:bg-muted/50 hover:border-foreground/20 transition-all"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-foreground shrink-0" />
+                          <h4 className="text-base font-semibold text-foreground tracking-tight">
+                            {item.title}
+                          </h4>
+                        </div>
+                        <p className="text-sm text-muted-foreground font-light leading-relaxed pl-6 rtl:pl-0 rtl:pr-6">
+                          {item.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Action */}
+                  <div className="pt-6 border-t border-border/40 flex items-center justify-between">
+                    <Link
+                      href="/contact?service=data"
+                      className={cn(
+                        buttonVariants({ size: "default", variant: "outline" }),
+                        "rounded-full px-6 text-xs tracking-wider font-semibold border-border/60 hover:bg-foreground hover:text-background dark:hover:bg-foreground dark:hover:text-background transition-colors gap-2"
+                      )}
+                    >
+                      <span>{t("discussSolution")}</span>
+                      <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 3. How We Work Section */}
+      <section id="how-we-work" className="relative overflow-hidden py-12 md:py-16 z-10 border-t border-border/40 scroll-mt-24">
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="flex flex-col gap-8 md:gap-12"
+          >
+            <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
+                {t.rich("howWeWork.title", {
+                  italic: (chunks) => <span className="text-foreground">{chunks}</span>
+                })}
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
+                {t("howWeWork.subtitle")}
+              </p>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {howWeWorkSteps.map((step, i) => (
+                <motion.div key={i} variants={fadeInUp}>
+                  <div className="rounded-3xl border border-border/60 bg-card p-6 md:p-8 flex flex-col justify-between h-full transition-colors hover:border-foreground/30 shadow-sm relative overflow-hidden group">
+                    <div className="flex flex-col gap-5">
+                      <div className="flex items-center justify-between">
+                        <div className="p-3 rounded-2xl bg-muted w-fit border border-border/40">
+                          {stepIcons[i] || <Cpu className="w-5 h-5 text-foreground stroke-[1.5]" />}
+                        </div>
+                        <span className="font-mono text-xs font-semibold text-muted-foreground tracking-wider">
+                          {step.num}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-medium tracking-tight text-foreground">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-light">
+                        {step.desc}
                       </p>
                     </div>
                   </div>
-
-                  {/* Right Column: Deliverables Checklist */}
-                  <div className="lg:col-span-6 flex flex-col gap-6 lg:border-l lg:border-border/40 lg:pl-12 rtl:lg:border-l-0 rtl:lg:border-r rtl:lg:pl-0 rtl:lg:pr-12">
-                    <h4 className="text-base font-semibold tracking-tight text-foreground">
-                      {offering.deliverablesTitle}
-                    </h4>
-
-                    <div className="flex flex-col gap-4">
-                      {offering.deliverables.map((item, di) => (
-                        <div key={di} className="flex items-start gap-3.5 p-4 rounded-2xl bg-muted/20 border border-border/30">
-                          <Check className="w-5 h-5 text-foreground shrink-0 mt-0.5" />
-                          <span className="text-sm sm:text-base text-foreground/90 font-light leading-relaxed">
-                            {item}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="pt-4 flex flex-wrap items-center justify-between gap-4">
-                      <Link
-                        href="/contact"
-                        className={cn(
-                          buttonVariants({ size: "default", variant: "outline" }),
-                          "rounded-full px-6 text-xs tracking-wider font-semibold border-border/60 hover:bg-foreground hover:text-background dark:hover:bg-foreground dark:hover:text-background transition-colors gap-2"
-                        )}
-                      >
-                        <span>{t("startWith", { num: offering.num })}</span>
-                        <ArrowRight className="w-4 h-4 rtl:rotate-180" />
-                      </Link>
-
-                      {offering.projectLink && (
-                        <Link
-                          href={offering.projectLink}
-                          className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-muted-foreground hover:text-foreground transition-colors group/cs py-2"
-                        >
-                          <span className="underline underline-offset-4 decoration-border/60 group-hover/cs:decoration-foreground">
-                            {t("viewCaseStudy")}: {offering.projectTitle}
-                          </span>
-                          <ArrowRight className="w-3.5 h-3.5 rtl:rotate-180 group-hover/cs:translate-x-0.5 rtl:group-hover/cs:-translate-x-0.5 transition-transform" />
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        </div>
-      </section>
-
-      {/* Engineering Standards Section */}
-      <section className="relative overflow-hidden pt-28 md:pt-40 z-10 border-t border-border/40 mt-16">
-        <div className="container max-w-7xl mx-auto px-4 relative z-10">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="flex flex-col gap-12 md:gap-16"
-        >
-          <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
-              {t.rich("standards.title", {
-                italic: (chunks) => <span>{chunks}</span>
-              })}
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
-              {t("standards.subtitle")}
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {standards.map((val, i) => (
-              <motion.div key={i} variants={fadeInUp}>
-                <div className="rounded-3xl border border-border/60 bg-card p-6 md:p-8 flex flex-col gap-5 h-full transition-colors hover:border-foreground/30 shadow-sm relative overflow-hidden">
-                  <div className="p-3 rounded-2xl bg-muted w-fit border border-border/40">
-                    {val.icon}
-                  </div>
-                  <h3 className="text-xl font-medium tracking-tight text-foreground">
-                    {val.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-light">
-                    {val.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        </div>
-      </section>
-
-      {/* Bottom CTA Banner */}
-      <section className="container max-w-7xl mx-auto px-4 pt-28 md:pt-36 relative z-10">
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="rounded-3xl border border-border/60 bg-card p-10 md:p-16 text-center flex flex-col items-center gap-8 shadow-sm relative overflow-hidden"
-        >
-          <div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
-              {t("cta.title")}
-            </h2>
-
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl font-light leading-relaxed">
-              {t("cta.subtitle")}
-            </p>
-
-            <div className="pt-2">
-              <Link
-                href="/contact"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "rounded-full px-10 text-sm h-13 tracking-widest font-semibold bg-foreground text-background hover:bg-foreground/90 transition-all justify-center"
-                )}
-              >
-                {t("cta.button")}
-              </Link>
+                </motion.div>
+              ))}
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. Bottom CTA Banner */}
+      <section className="relative overflow-hidden py-12 md:py-16 z-10 border-t border-border/40">
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="rounded-3xl border border-border/60 bg-card p-8 sm:p-12 md:p-14 text-center flex flex-col items-center gap-6 md:gap-8 shadow-sm relative overflow-hidden"
+          >
+            <div className="relative z-10 flex flex-col items-center gap-6 md:gap-8 max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
+                {t("cta.title")}
+              </h2>
+
+              <p className="text-muted-foreground text-base md:text-lg max-w-2xl font-light leading-relaxed">
+                {t("cta.subtitle")}
+              </p>
+
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "rounded-full px-10 text-sm h-13 tracking-widest font-semibold bg-foreground text-background hover:bg-foreground/90 transition-all justify-center w-full sm:w-auto"
+                  )}
+                >
+                  {t("cta.button")}
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
     </div>
   )

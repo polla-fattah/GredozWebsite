@@ -31,7 +31,7 @@ export async function generateMetadata({
   const description = t(`${member.slug}.overviewP1`)
 
   return {
-    title: `${title} — ${role} | Gredoz`,
+    title: `${title} — ${role} | ${locale === "en" ? "Gredoz" : "گرێدۆز"}`,
     description,
     openGraph: {
       title: `${title} — ${role}`,

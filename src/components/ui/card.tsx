@@ -11,7 +11,7 @@ function Card({
       data-slot="card"
       data-size={size}
       className={cn(
-        "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-gradient-to-b from-white via-[#fffdfb] to-[#ffede3] dark:from-transparent dark:to-transparent border border-[#e15813]/15 dark:border-border/60 shadow-[0_1px_3px_rgba(225,88,19,0.08),0_8px_24px_-4px_rgba(225,88,19,0.07)] dark:shadow-none dark:bg-card/40 dark:backdrop-blur-xl py-(--card-spacing) text-sm text-card-foreground [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl transition-all duration-300",
+        "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-gradient-to-b from-white via-[#fffdfb] to-[#ffede3] dark:from-transparent dark:via-transparent dark:to-transparent dark:bg-none border border-[#e15813]/15 dark:border-border/60 shadow-[0_1px_3px_rgba(225,88,19,0.08),0_8px_24px_-4px_rgba(225,88,19,0.07)] dark:shadow-none bg-card/40 dark:bg-card/40 dark:backdrop-blur-xl py-(--card-spacing) text-sm text-card-foreground [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl transition-all duration-300",
         className
       )}
       {...props}

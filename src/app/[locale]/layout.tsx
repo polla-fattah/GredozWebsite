@@ -71,7 +71,22 @@ export async function generateMetadata({
       default: t("defaultTitle"),
     },
     description: t("defaultDescription"),
-    keywords: ["software development", "web apps", "mobile apps", "Gredoz", "Erbil", "Kurdistan", "UI/UX design", "digital products"],
+    keywords: [
+      "Gredoz",
+      "گرێدۆز",
+      "software development",
+      "hardware supply",
+      "IT infrastructure",
+      "data solutions",
+      "data analytics",
+      "enterprise networking",
+      "cabling and servers",
+      "Erbil IT company",
+      "Kurdistan tech solutions",
+      "Iraq IT services",
+      "custom web apps",
+      "mobile app development"
+    ],
     authors: [{ name: "Gredoz" }],
     creator: "Gredoz",
     publisher: "Gredoz",
@@ -99,7 +114,7 @@ export async function generateMetadata({
           url: "/images/isometric_financial_dashboard.jpg",
           width: 1200,
           height: 630,
-          alt: "Gredoz Software Solutions",
+          alt: t("defaultTitle"),
         }
       ]
     },
@@ -145,9 +160,9 @@ export default async function LocaleLayout({
   const dir = locale === "ar" || locale === "ku" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
+    <html lang={locale} dir={dir} suppressHydrationWarning className="overflow-x-hidden">
       <body
-        className={`${arkanGraphik.variable} font-sans antialiased min-h-screen flex flex-col selection:bg-foreground selection:text-background`}
+        className={`${arkanGraphik.variable} font-sans antialiased min-h-screen flex flex-col selection:bg-foreground selection:text-background overflow-x-hidden w-full`}
       >
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll>

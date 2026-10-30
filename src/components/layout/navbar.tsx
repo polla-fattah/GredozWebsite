@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl"
 import { Link, usePathname } from "@/i18n/routing"
 import { ThemeToggle } from "../ThemeToggle"
 import { LanguageSwitcher } from "../LanguageSwitcher"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu } from "lucide-react"
 import {
@@ -59,14 +59,14 @@ export function Navbar() {
           <div className="flex items-center gap-4 md:gap-2 drop-shadow-sm">
             <Link href="/" className="flex items-center">
               <img 
-                src="/logo/logo-black.png" 
+                src="/logo/base-light-mode.png" 
                 alt="Gredoz Logo" 
-                className="block dark:hidden h-6 w-auto hover:opacity-80 transition-opacity" 
+                className="block dark:hidden h-8 w-auto hover:opacity-80 transition-opacity" 
               />
               <img 
-                src="/logo/logo-white.png" 
+                src="/logo/base-dark-mode.png" 
                 alt="Gredoz Logo" 
-                className="hidden dark:block h-6 w-auto hover:opacity-80 transition-opacity" 
+                className="hidden dark:block h-8 w-auto hover:opacity-80 transition-opacity" 
               />
             </Link>
           </div>
@@ -76,17 +76,14 @@ export function Navbar() {
             <Link href="/" className={cn("transition-colors hover:text-foreground", isActive("/") ? "text-foreground" : "text-foreground/80")}>
               {t("home")}
             </Link>
-            <Link href="/projects" className={cn("transition-colors hover:text-foreground", isActive("/projects") ? "text-foreground" : "text-foreground/80")}>
-              {t("projects")}
+            <Link href="/services" className={cn("transition-colors hover:text-foreground", isActive("/services") ? "text-foreground" : "text-foreground/80")}>
+              {t("services")}
             </Link>
             <Link href="/about" className={cn("transition-colors hover:text-foreground", isActive("/about") ? "text-foreground" : "text-foreground/80")}>
               {t("about")}
             </Link>
             <Link href="/team" className={cn("transition-colors hover:text-foreground", isActive("/team") ? "text-foreground" : "text-foreground/80")}>
               {t("team")}
-            </Link>
-            <Link href="/services" className={cn("transition-colors hover:text-foreground", isActive("/services") ? "text-foreground" : "text-foreground/80")}>
-              {t("services")}
             </Link>
           </nav>
 
@@ -114,8 +111,8 @@ export function Navbar() {
                 </Link>
               </DrawerClose>
               <DrawerClose asChild>
-                <Link href="/projects" className={cn("block px-2 py-1 text-2xl font-medium transition-colors hover:text-foreground", isActive("/projects") ? "text-foreground" : "text-muted-foreground")}>
-                  {t("projects")}
+                <Link href="/services" className={cn("block px-2 py-1 text-2xl font-medium transition-colors hover:text-foreground", isActive("/services") ? "text-foreground" : "text-muted-foreground")}>
+                  {t("services")}
                 </Link>
               </DrawerClose>
               <DrawerClose asChild>
@@ -126,11 +123,6 @@ export function Navbar() {
               <DrawerClose asChild>
                 <Link href="/team" className={cn("block px-2 py-1 text-2xl font-medium transition-colors hover:text-foreground", isActive("/team") ? "text-foreground" : "text-muted-foreground")}>
                   {t("team")}
-                </Link>
-              </DrawerClose>
-              <DrawerClose asChild>
-                <Link href="/services" className={cn("block px-2 py-1 text-2xl font-medium transition-colors hover:text-foreground", isActive("/services") ? "text-foreground" : "text-muted-foreground")}>
-                  {t("services")}
                 </Link>
               </DrawerClose>
               <DrawerClose asChild>

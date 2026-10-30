@@ -1,57 +1,123 @@
 "use client"
 
-import { useTranslations, useLocale } from "next-intl"
+import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/routing"
+
 export function Footer() {
   const t = useTranslations("Footer")
-  const tNav = useTranslations("Navbar")
-  const tS = useTranslations("ServicesPage")
-  const tP = useTranslations("Projects")
-  const locale = useLocale()
+
+  const pages = [
+    { label: t("home"), href: "/" },
+    { label: t("services"), href: "/services" },
+    { label: t("about"), href: "/about" },
+    { label: t("team"), href: "/team" },
+    { label: t("contact"), href: "/contact" },
+  ]
+
+  const solutions = [
+    { label: t("software"), href: "/services#software" },
+    { label: t("hardware"), href: "/services#hardware" },
+    { label: t("data"), href: "/services#data" },
+    { label: t("howWeWork"), href: "/services#how-we-work" },
+  ]
+
+  const sections = [
+    { label: t("whyGredoz"), href: "/#why-gredoz" },
+    { label: t("partnership"), href: "/#engagement" },
+    { label: t("faq"), href: "/#faq" },
+  ]
 
   return (
-    <footer id="footer" className="bg-[#0a0a0a] text-white pt-24 pb-8 overflow-hidden">
+    <footer id="footer" className="bg-[#0a0a0a] text-white pt-14 md:pt-16 pb-10 md:pb-12 overflow-hidden border-t border-white/10">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2 mb-16">
-            <img 
-              src="/logo/logo-full-white.png" 
-              alt="Gredoz Logo" 
-              className="h-8 w-auto" 
-            />
+        <div className="flex flex-col gap-16">
+          {/* Main 4-Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+            {/* Column 1: Brand & Contact Info */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              <Link href="/" className="inline-block w-fit">
+                <img 
+                  src="/logo/dark-mode.png" 
+                  alt="Gredoz Logo" 
+                  className="h-14 sm:h-16 w-auto hover:opacity-80 transition-opacity" 
+                />
+              </Link>
+              <p className="text-sm font-medium text-white/70 tracking-wide max-w-sm">
+                {t("tagline")}
+              </p>
+
+              <div className="flex flex-col gap-2 pt-2 text-xs font-mono text-white/60">
+                <a href="mailto:info@gredoz.krd" className="hover:text-white transition-colors w-fit">
+                  info@gredoz.krd
+                </a>
+                <a href="tel:+9647874401600" className="hover:text-white transition-colors w-fit" dir="ltr">
+                  +964 787 440 1600 · +964 750 770 0409
+                </a>
+                <span className="text-white/40">Erbil, Kurdistan Region, Iraq</span>
+              </div>
+            </div>
+
+            {/* Column 2: Pages */}
+            <div className="lg:col-span-2 flex flex-col gap-4">
+              <h4 className="font-semibold text-white text-xs tracking-wider uppercase">
+                {t("pagesTitle")}
+              </h4>
+              <div className="flex flex-col gap-2.5">
+                {pages.map((link, idx) => (
+                  <Link 
+                    key={idx}
+                    href={link.href} 
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 3: Solutions */}
+            <div className="lg:col-span-3 flex flex-col gap-4">
+              <h4 className="font-semibold text-white text-xs tracking-wider uppercase">
+                {t("solutionsTitle")}
+              </h4>
+              <div className="flex flex-col gap-2.5">
+                {solutions.map((link, idx) => (
+                  <Link 
+                    key={idx}
+                    href={link.href} 
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Column 4: Sections */}
+            <div className="lg:col-span-2 flex flex-col gap-4">
+              <h4 className="font-semibold text-white text-xs tracking-wider uppercase">
+                {t("sectionsTitle")}
+              </h4>
+              <div className="flex flex-col gap-2.5">
+                {sections.map((link, idx) => (
+                  <Link 
+                    key={idx}
+                    href={link.href} 
+                    className="text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
-            <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-white text-sm mb-2">{t("company")}</h4>
-              <Link href="/" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("home")}</Link>
-              <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">{t("about")}</Link>
-              <Link href="/team" className="text-sm text-white/50 hover:text-white transition-colors">{t("team")}</Link>
-              <Link href="/services" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("services")}</Link>
-              <Link href="/projects" className="text-sm text-white/50 hover:text-white transition-colors">{tNav("projects")}</Link>
-              <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">{t("contact")}</Link>
-            </div>
 
-            <div className="flex flex-col gap-4 lg:col-span-2">
-              <h4 className="font-medium text-white text-sm mb-2">{tNav("services")}</h4>
-              <Link href="/services#service-1" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s1.title")}</Link>
-              <Link href="/services#service-2" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s2.title")}</Link>
-              <Link href="/services#service-3" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s3.title")}</Link>
-              <Link href="/services#service-4" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s4.title")}</Link>
-              <Link href="/services#service-5" className="text-sm text-white/50 hover:text-white transition-colors">{tS("s5.title")}</Link>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-white text-sm mb-2">{tNav("projects")}</h4>
-              <Link href="/projects/financial-management" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p1_title")}</Link>
-              <Link href="/projects/ecommerce-dashboard" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p2_title")}</Link>
-              <Link href="/projects/financial-management" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p3_title")}</Link>
-              <Link href="/projects/ecommerce-dashboard" className="text-sm text-white/50 hover:text-white transition-colors">{tP("p4_title")}</Link>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-xs font-medium text-white/50 w-full px-4 border-t border-white/10 pt-8">
+          {/* Bottom Bar: Copyright & Location */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40 pt-8 border-t border-white/10">
             <p>{t("copyright")}</p>
+            <p className="font-mono text-[11px] text-white/30">
+              Sunday–Thursday, 9:00–17:00 · Erbil, Iraq
+            </p>
           </div>
         </div>
       </div>

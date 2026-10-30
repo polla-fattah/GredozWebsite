@@ -151,7 +151,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             {/* Left Column: Office Details & Direct Channels */}
             <motion.div variants={fadeInUp} className="w-full h-full flex flex-col">
-              <Card className="rounded-3xl border border-border/60 bg-card p-5 sm:p-8 md:p-10 shadow-sm relative overflow-hidden group h-full flex flex-col">
+              <Card className="rounded-3xl border border-border/60 bg-card bg-none p-5 sm:p-8 md:p-10 shadow-xs relative overflow-hidden group h-full flex flex-col">
                 <CardContent className="p-0 flex flex-col gap-6 flex-1 justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-8">
@@ -334,7 +334,7 @@ export default function ContactPage() {
 
             {/* Right Column: React Hook Form */}
             <motion.div variants={fadeInUp} className="w-full h-full flex flex-col">
-              <Card className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 md:p-10 shadow-sm relative overflow-hidden group h-full flex flex-col">
+              <Card className="rounded-3xl border border-border/60 bg-card bg-none p-6 sm:p-8 md:p-10 shadow-xs relative overflow-hidden group h-full flex flex-col">
                 <CardContent className="p-0 flex flex-col flex-1 justify-between">
                   {isSubmitted ? (
                     <motion.div
@@ -505,7 +505,7 @@ export default function ContactPage() {
 
           {/* What Happens Next */}
           <motion.div variants={fadeInUp}>
-            <Card className="rounded-3xl border border-border/60 bg-card p-6 sm:p-10 shadow-sm relative overflow-hidden group">
+            <Card className="rounded-3xl border border-border/60 bg-card bg-none p-6 sm:p-10 shadow-xs relative overflow-hidden group">
               <CardContent className="p-0 flex flex-col gap-8">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/40 pb-5">
                   <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-foreground">

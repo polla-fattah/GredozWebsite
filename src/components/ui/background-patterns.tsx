@@ -341,7 +341,7 @@ export function AmbientGlow({
     <div
       aria-hidden="true"
       className={cn(
-        "absolute pointer-events-none select-none blur-[90px] md:blur-[120px] opacity-40 md:opacity-35 dark:opacity-40 mix-blend-normal dark:mix-blend-screen overflow-visible",
+        "absolute pointer-events-none select-none blur-[90px] md:blur-[120px] opacity-20 md:opacity-20 dark:opacity-25 mix-blend-normal dark:mix-blend-screen overflow-visible",
         current.container,
         className
       )}
@@ -349,7 +349,7 @@ export function AmbientGlow({
       {/* Primary Organic Layer (Warm Orange Spectrum) */}
       <div
         className={cn(
-          "absolute rounded-[40%_60%_70%_30%/40%_50%_60%_55%] bg-gradient-to-r from-[#e15813]/40 via-[#ee7639]/35 to-[#f59e0b]/30 transform-gpu will-change-transform",
+          "absolute rounded-[40%_60%_70%_30%/40%_50%_60%_55%] bg-gradient-to-r from-[#e15813]/15 via-[#ee7639]/12 to-[#f59e0b]/10 transform-gpu will-change-transform",
           animated && "animate-float-slow",
           current.blob1
         )}
@@ -358,7 +358,7 @@ export function AmbientGlow({
       {/* Secondary Complementary Layer (Deeper Amber / Rust Contrast) */}
       <div
         className={cn(
-          "absolute rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-[#c2410c]/30 via-[#e15813]/25 to-[#fb923c]/25 mix-blend-overlay dark:mix-blend-screen transform-gpu will-change-transform",
+          "absolute rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-[#c2410c]/10 via-[#e15813]/08 to-[#fb923c]/08 mix-blend-overlay dark:mix-blend-screen transform-gpu will-change-transform",
           animated && "animate-float-alt",
           current.blob2
         )}
@@ -368,7 +368,7 @@ export function AmbientGlow({
       {current.blob3 && (
         <div
           className={cn(
-            "absolute rounded-full bg-gradient-to-b from-[#f97316]/25 via-[#fb923c]/20 to-transparent mix-blend-screen opacity-70",
+            "absolute rounded-full bg-gradient-to-b from-[#f97316]/08 via-[#fb923c]/05 to-transparent mix-blend-screen opacity-50",
             current.blob3
           )}
         />

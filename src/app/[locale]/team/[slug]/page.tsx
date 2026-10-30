@@ -57,8 +57,8 @@ export default function TeamMemberDetailsPage() {
           animate="visible"
           className="flex flex-col gap-10 md:gap-12"
         >
-          {/* Top Breadcrumb & Status */}
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          {/* Top Breadcrumb */}
+          <motion.div variants={fadeInUp} className="flex items-center justify-between">
             <Link
               href="/team"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card/60 backdrop-blur-md border border-border/60 text-xs font-mono font-medium hover:bg-muted hover:border-foreground/30 transition-all uppercase tracking-wider text-muted-foreground hover:text-foreground w-fit shadow-xs group"
@@ -66,12 +66,6 @@ export default function TeamMemberDetailsPage() {
               <ArrowLeft className="w-3.5 h-3.5 rtl:rotate-180 group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5 transition-transform" />
               <span>{t("labels.back")}</span>
             </Link>
-
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/40 bg-card/40 backdrop-blur-md text-xs font-mono text-muted-foreground">
-              <span>{t("labels.locationVal")}</span>
-              <span className="text-border/80">·</span>
-              <span className="text-foreground/70">GMT+3</span>
-            </div>
           </motion.div>
 
           {/* Clean Executive Header Card (No badges, no circular glow behind logo) */}

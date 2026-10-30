@@ -349,7 +349,7 @@ export function AmbientGlow({
       {/* Primary Organic Layer (Warm Orange Spectrum) */}
       <div
         className={cn(
-          "absolute rounded-[40%_60%_70%_30%/40%_50%_60%_55%] bg-gradient-to-r from-[#e15813]/40 via-[#ee7639]/35 to-[#f59e0b]/30",
+          "absolute rounded-[40%_60%_70%_30%/40%_50%_60%_55%] bg-gradient-to-r from-[#e15813]/40 via-[#ee7639]/35 to-[#f59e0b]/30 transform-gpu will-change-transform",
           animated && "animate-float-slow",
           current.blob1
         )}
@@ -358,7 +358,7 @@ export function AmbientGlow({
       {/* Secondary Complementary Layer (Deeper Amber / Rust Contrast) */}
       <div
         className={cn(
-          "absolute rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-[#c2410c]/30 via-[#e15813]/25 to-[#fb923c]/25 mix-blend-overlay dark:mix-blend-screen",
+          "absolute rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-tr from-[#c2410c]/30 via-[#e15813]/25 to-[#fb923c]/25 mix-blend-overlay dark:mix-blend-screen transform-gpu will-change-transform",
           animated && "animate-float-alt",
           current.blob2
         )}

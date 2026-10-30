@@ -39,6 +39,10 @@ export function Footer() {
                 <img 
                   src="/logo/dark-mode.png" 
                   alt="Gredoz Logo" 
+                  width={240}
+                  height={64}
+                  loading="lazy"
+                  decoding="async"
                   className="h-14 sm:h-16 w-auto hover:opacity-80 transition-opacity" 
                 />
               </Link>

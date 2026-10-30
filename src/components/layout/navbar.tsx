@@ -61,11 +61,19 @@ export function Navbar() {
               <img 
                 src="/logo/base-light-mode.png" 
                 alt="Gredoz Logo" 
+                width={140}
+                height={32}
+                fetchPriority="high"
+                decoding="async"
                 className="block dark:hidden h-8 w-auto hover:opacity-80 transition-opacity" 
               />
               <img 
                 src="/logo/base-dark-mode.png" 
                 alt="Gredoz Logo" 
+                width={140}
+                height={32}
+                fetchPriority="high"
+                decoding="async"
                 className="hidden dark:block h-8 w-auto hover:opacity-80 transition-opacity" 
               />
             </Link>

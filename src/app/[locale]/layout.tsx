@@ -55,6 +55,7 @@ const arkanGraphik = localFont({
     },
   ],
   variable: "--font-arkan",
+  display: "swap",
 });
 
 export async function generateMetadata({

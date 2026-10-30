@@ -1,29 +1,30 @@
 import { MetadataRoute } from 'next'
+import { TEAM_MEMBERS_DATA } from '@/lib/team-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://gredoz.com'
   const locales = ['en', 'ku', 'ar']
   
-  const routes = [
+  const staticRoutes = [
     '',
-    '/about',
     '/services',
-    '/projects',
+    '/about',
+    '/team',
     '/contact',
-    '/projects/financial-management',
-    '/projects/ecommerce-dashboard',
   ]
+
+  const memberRoutes = TEAM_MEMBERS_DATA.map((member) => `/team/${member.slug}`)
+  const allRoutes = [...staticRoutes, ...memberRoutes]
   
   const sitemapEntries: MetadataRoute.Sitemap = []
   
-  // For each route, we create an entry for each locale
-  routes.forEach((route) => {
+  allRoutes.forEach((route) => {
     locales.forEach((locale) => {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(),
-        changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1 : 0.8,
+        changeFrequency: route === '' ? 'weekly' : route.startsWith('/team/') ? 'monthly' : 'weekly',
+        priority: route === '' ? 1.0 : route === '/services' ? 0.9 : 0.8,
       })
     })
   })

@@ -27,6 +27,8 @@ export function EngagementModels() {
       title: t("m1_title"),
       tag: t("m1_tag"),
       desc: t("m1_desc"),
+      cta: t("m1_cta"),
+      href: "/contact?service=software",
       icon: <Users2 className="w-6 h-6 text-background stroke-[1.5]" />,
       features: [
         t("m1_f1"),
@@ -40,6 +42,8 @@ export function EngagementModels() {
       title: t("m2_title"),
       tag: t("m2_tag"),
       desc: t("m2_desc"),
+      cta: t("m2_cta"),
+      href: "/contact",
       icon: <Workflow className="w-6 h-6 text-background stroke-[1.5]" />,
       features: [
         t("m2_f1"),
@@ -53,6 +57,8 @@ export function EngagementModels() {
       title: t("m3_title"),
       tag: t("m3_tag"),
       desc: t("m3_desc"),
+      cta: t("m3_cta"),
+      href: "/contact?service=hardware",
       icon: <RefreshCcw className="w-6 h-6 text-background stroke-[1.5]" />,
       features: [
         t("m3_f1"),
@@ -158,7 +164,7 @@ export function EngagementModels() {
 
                 <div className="pt-6 mt-6 border-t border-background/10">
                   <Link
-                    href="/contact"
+                    href={model.href}
                     className={cn(
                       buttonVariants({ size: "default" }),
                       "w-full rounded-full text-xs sm:text-sm font-semibold justify-center transition-all gap-2 px-4 py-3 h-auto sm:h-11 text-center whitespace-normal shrink-0",
@@ -167,7 +173,7 @@ export function EngagementModels() {
                         : "bg-background/10 text-background hover:bg-background hover:text-foreground"
                     )}
                   >
-                    <span>{t("cta")}</span>
+                    <span>{model.cta}</span>
                     <ArrowRight className="w-4 h-4 rtl:rotate-180 shrink-0" />
                   </Link>
                 </div>

@@ -719,7 +719,10 @@
       "g3_desc": "Official brand warranties and fast on-site response times.",
       "g4_title": "Enterprise NDA",
       "g4_desc": "Mutual non-disclosure signed before exploring any business data."
-    }
+    },
+    "m1_cta": "HIRE A SQUAD",
+    "m2_cta": "BUILD TURNKEY SOLUTION",
+    "m3_cta": "REQUEST SLA RETAINER"
   },
   "Faq": {
     "title": "Frequently Asked <italic>Questions</italic>",

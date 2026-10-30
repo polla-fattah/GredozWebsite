@@ -39,6 +39,10 @@ export function Footer() {
                 <img 
                   src="/logo/dark-mode.png" 
                   alt="Gredoz Logo" 
+                  width={240}
+                  height={64}
+                  loading="lazy"
+                  decoding="async"
                   className="h-14 sm:h-16 w-auto hover:opacity-80 transition-opacity" 
                 />
               </Link>
@@ -116,7 +120,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40 pt-8 border-t border-white/10">
             <p>{t("copyright")}</p>
             <p className="font-mono text-[11px] text-white/30">
-              Sunday–Thursday, 9:00–17:00 · Erbil, Iraq
+              {t("workingHours")}
             </p>
           </div>
         </div>

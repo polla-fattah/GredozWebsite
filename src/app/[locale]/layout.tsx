@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "../globals.css";
 import "lenis/dist/lenis.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -55,7 +55,12 @@ const arkanGraphik = localFont({
     },
   ],
   variable: "--font-arkan",
+  display: "swap",
 });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -63,6 +68,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata" });
   return {
     metadataBase: new URL("https://gredoz.com"),
@@ -148,6 +154,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as "en" | "ar" | "ku")) {
     notFound();

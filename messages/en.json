@@ -25,7 +25,8 @@
     "whyGredoz": "Why Gredoz",
     "partnership": "Partnership models",
     "faq": "FAQ",
-    "copyright": "© 2026 Gredoz. All rights reserved."
+    "copyright": "© 2026 Gredoz. All rights reserved.",
+    "workingHours": "Sunday–Thursday, 9:00–17:00 · Erbil, Iraq"
   },
   "Hero": {
     "headline": "We find the knot. Then we untie it.",
@@ -117,7 +118,7 @@
   },
   "Testimonials": {
     "title": "Our Client <italic>Reviews</italic>",
-    "review": "DigitX transformed our outdated website into a modern, responsive platform. Their attention to detail and ability to understand our vision made the entire process smooth and hassle-free.",
+    "review": "Gredoz transformed our outdated website into a modern, responsive platform. Their attention to detail and ability to understand our vision made the entire process smooth and hassle-free.",
     "author": "Michael Johnson",
     "role": "Marketing Manager at GlobalTech Solutions."
   },
@@ -719,7 +720,10 @@
       "g3_desc": "Official brand warranties and fast on-site response times.",
       "g4_title": "Enterprise NDA",
       "g4_desc": "Mutual non-disclosure signed before exploring any business data."
-    }
+    },
+    "m1_cta": "HIRE A SQUAD",
+    "m2_cta": "BUILD TURNKEY SOLUTION",
+    "m3_cta": "REQUEST SLA RETAINER"
   },
   "Faq": {
     "title": "Frequently Asked <italic>Questions</italic>",

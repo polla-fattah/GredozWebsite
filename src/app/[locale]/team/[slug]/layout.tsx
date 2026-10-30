@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { findTeamMember, TEAM_MEMBERS_DATA } from "@/lib/team-data"
 
 export async function generateStaticParams() {
@@ -20,7 +20,8 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { locale, slug } = await params
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const member = findTeamMember(slug)
 
   if (!member) return {}
@@ -46,6 +47,14 @@ export async function generateMetadata({
   }
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return <>{children}</>
 }

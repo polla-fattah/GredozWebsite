@@ -23,13 +23,6 @@ export default function ServicesPage() {
   const t = useTranslations("ServicesPage")
   const messages = useMessages() as any
 
-  const metrics = [
-    { value: t("metrics.m1_val"), label: t("metrics.m1_label") },
-    { value: t("metrics.m2_val"), label: t("metrics.m2_label") },
-    { value: t("metrics.m3_val"), label: t("metrics.m3_label") },
-    { value: t("metrics.m4_val"), label: t("metrics.m4_label") },
-  ]
-
   const softwareItems: Array<{ title: string; desc: string }> = 
     messages?.ServicesPage?.software?.items || []
 
@@ -91,24 +84,6 @@ export default function ServicesPage() {
                 <span>{t("startProject")}</span>
                 <ArrowRight className="w-4 h-4 rtl:rotate-180" />
               </Link>
-            </div>
-          </motion.div>
-
-          {/* Architectural Metrics Strip */}
-          <motion.div variants={fadeInUp} className="pt-4 md:pt-6">
-            <div className="rounded-3xl border border-border/60 bg-card p-6 sm:p-8 md:p-10 shadow-sm relative overflow-hidden group">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                {metrics.map((metric, i) => (
-                  <div key={i} className="flex flex-col gap-1.5">
-                    <span className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-foreground">
-                      {metric.value}
-                    </span>
-                    <span className="text-xs uppercase tracking-wider font-semibold text-muted-foreground">
-                      {metric.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           </motion.div>
         </motion.div>

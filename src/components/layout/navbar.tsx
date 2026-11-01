@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import { ThemeToggle } from "../ThemeToggle";
 import { LanguageSwitcher } from "../LanguageSwitcher";
@@ -19,6 +19,21 @@ import {
 export function Navbar() {
   const t = useTranslations("Navbar");
   const pathname = usePathname();
+  const locale = useLocale();
+
+  const lightLogo =
+    locale === "ar"
+      ? "/logo/light-mode-ar.png"
+      : locale === "ku"
+      ? "/logo/light-mode-ku.png"
+      : "/logo/light-mode.png";
+
+  const darkLogo =
+    locale === "ar"
+      ? "/logo/dark-mode-ar.png"
+      : locale === "ku"
+      ? "/logo/dark-mode-ku.png"
+      : "/logo/dark-mode.png";
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -63,7 +78,7 @@ export function Navbar() {
           <div className="flex items-center gap-4 md:gap-2 drop-shadow-sm">
             <Link href="/" className="flex items-center">
               <img
-                src="/logo/light-mode.png"
+                src={lightLogo}
                 alt="Gredoz Logo"
                 width={140}
                 height={32}
@@ -72,7 +87,7 @@ export function Navbar() {
                 className="block dark:hidden h-8 w-auto hover:opacity-80 transition-opacity"
               />
               <img
-                src="/logo/dark-mode.png"
+                src={darkLogo}
                 alt="Gredoz Logo"
                 width={140}
                 height={32}

@@ -1,10 +1,18 @@
 "use client"
 
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { Link } from "@/i18n/routing"
 
 export function Footer() {
   const t = useTranslations("Footer")
+  const locale = useLocale()
+
+  const footerLogo =
+    locale === "ar"
+      ? "/logo/dark-mode-ar.png"
+      : locale === "ku"
+      ? "/logo/dark-mode-ku.png"
+      : "/logo/dark-mode.png"
 
   const pages = [
     { label: t("home"), href: "/" },
@@ -37,7 +45,7 @@ export function Footer() {
             <div className="lg:col-span-5 flex flex-col gap-6">
               <Link href="/" className="inline-block w-fit">
                 <img 
-                  src="/logo/dark-mode.png" 
+                  src={footerLogo} 
                   alt="Gredoz Logo" 
                   width={240}
                   height={64}
